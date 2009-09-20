@@ -6,8 +6,6 @@ require 'icalendar'
 require 'rio'
 require 'erb'
 
-require 'ruby-debug'
-
 get '/' do
   file = RIO.rio("https://www.google.com/calendar/ical/dance%40wildfalcon.com/private-487b33af7da6bc2ab99e9c93b1d1d4ea/basic.ics")
   today = Time.now
