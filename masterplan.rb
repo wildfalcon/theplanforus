@@ -32,6 +32,6 @@ get '/' do
 
     erb :calendar
   else
-    'Please set the environment var "masterplan_filename"'
+    'Please set the environment var "MASTERPLAN_FILENAME"'
   end
 end
