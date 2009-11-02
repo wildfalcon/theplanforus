@@ -14,6 +14,7 @@ background:lightBlue;
 }
 .date {
 float:left;
+text-align: right;
 width:100px;
 background:pink;
 }
