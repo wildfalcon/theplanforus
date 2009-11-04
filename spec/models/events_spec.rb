@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
-describe Events do
+describe Event do
   before(:each) do
     @valid_attributes = {
       :type => "value for type",
@@ -11,6 +11,6 @@ describe Events do
   end
 
   it "should create a new instance given valid attributes" do
-    Events.create!(@valid_attributes)
+    Event.create!(@valid_attributes)
   end
 end
