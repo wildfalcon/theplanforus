@@ -10,18 +10,19 @@ class Plan < ActiveRecord::Base
         date = start_day+d.days
         days["#{date.year}#{date.yday}"]=Day.new(date)
       end
-      
-      
-      ical_filename = "https://www.google.com/calendar/ical/dance%40wildfalcon.com/private-f3f01ef99b90b2bfc79ae7edcf5c7d3a/basic.ics"
-      if ical_filename
-        file = RIO.rio(ical_filename)  
-        Icalendar.parse(file.read).first.events.each do |event|
-          date = event.dtstart
-          if days["#{date.year}#{date.yday}"]
-            days["#{date.year}#{date.yday}"].events << event
-          end
-        end
-      end
+
+
+      # ical_filename = self.ical_feed
+      # 
+      #       if ical_filename
+      #         file = RIO.rio(ical_filename)  
+      #         Icalendar.parse(file.read).first.events.each do |event|
+      #           date = event.dtstart
+      #           if days["#{date.year}#{date.yday}"]
+      #             days["#{date.year}#{date.yday}"].events << event
+      #           end
+      #         end
+      #       end
       
       events.each do |event|
         date = event.date
@@ -29,9 +30,30 @@ class Plan < ActiveRecord::Base
           days["#{date.year}#{date.yday}"].events << event
         end
       end
-      
+
       days = days.to_a.map{|t| t.last}
       days.sort!{|a,b| a.date <=> b.date}
     end
   end
+
+  def weeks
+    @weeks ||= begin
+      weeks = {}
+      today = Time.now.to_date.beginning_of_week
+      (0..51).each do |w|
+        date=today+w.weeks
+        weeks["#{date.year}#{date.yday}"]=Week.new(date)
+      end
+      
+      events.each do |event|
+        date = event.date.beginning_of_week
+        if weeks["#{date.year}#{date.yday}"]
+          weeks["#{date.year}#{date.yday}"].events << event
+        end
+      end
+      weeks = weeks.to_a.map{|t| t.last}
+      weeks.sort!{|a,b| a.start_date <=> b.start_date}
+    end
+  end
+
 end
