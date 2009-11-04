@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 
 
-  map.resources :plans do |plan|
+  map.resources :plans, :member => { :daily => :get, :weekly => :get } do |plan|
     plan.resources :events
   end
 

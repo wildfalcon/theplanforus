@@ -1,0 +1,4 @@
+<tr class="<%= "major" if week.has_major_event? %>">
+	<td><%= week.number %></td>
+	<td><% if week.has_major_event? %><div class="major_tab"><%= week.major_event.summary%></div><% end %></td>
+</tr>
