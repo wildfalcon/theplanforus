@@ -2,13 +2,13 @@
 <!DOCTYPE html 
      PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="<%= controller.controller_name -%>">
 <head>
   <title>Dance Calendar</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<%= stylesheet_link_tag :all, :cache => true %> 
 </head>
-<body>
+<body class="<%= controller.action_name -%>">
 <p style="color: green"><%= flash[:notice] %></p>
 <%= yield %>
 

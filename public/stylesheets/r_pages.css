@@ -1,0 +1,10 @@
+/*daily view on plans controller*/
+html.plans body.daily .month{margin-top:2px;}
+
+
+/*weekly view on plans controller*/
+html.plans body.weekly table {border-collapse: collapse;} /*odd but works in IE as well*/
+html.plans body.weekly table tr.minor td{border-bottom: 1px solid #999; position: relative;}
+html.plans body.weekly table div.minor_tab{background: #999; position: absolute; padding-left:4px;}
+html.plans body.weekly table tr.major td{border-bottom: 1px solid red; position: relative;}
+html.plans body.weekly table div.major_tab{background: red; position: absolute; padding-left:4px;}
