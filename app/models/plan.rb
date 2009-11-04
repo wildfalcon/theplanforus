@@ -42,7 +42,7 @@ class Plan < ActiveRecord::Base
       today = Time.now.to_date.beginning_of_week
       (0..51).each do |w|
         date=today+w.weeks
-        weeks["#{date.year}#{date.yday}"]=Week.new(date)
+        weeks["#{date.year}#{date.yday}"]=Week.build(:date => date)
       end
       
       events.each do |event|
