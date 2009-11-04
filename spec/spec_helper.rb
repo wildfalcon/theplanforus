@@ -2,6 +2,7 @@
 # from the project root directory.
 ENV["RAILS_ENV"] ||= 'test'
 require File.dirname(__FILE__) + "/../config/environment" unless defined?(RAILS_ROOT)
+require File.dirname(__FILE__) + "/factories" 
 require 'spec/autorun'
 require 'spec/rails'
 require 'fakeweb'
