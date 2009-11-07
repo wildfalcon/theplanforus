@@ -28,7 +28,7 @@ describe Week do
     @week.has_primary_event?.should == true
   end
 
-  it "should be able to list its major events" do
+  it "should be able to list its primary events" do
     event = Factory.build(:event, {:date => Date.parse("2010-01-01")})
     @week.events << event
     @week.primary_events.should be_include(event)

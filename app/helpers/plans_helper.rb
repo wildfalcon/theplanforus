@@ -7,9 +7,12 @@ module PlansHelper
     return class_name
   end
   
-  def event_class(event)
-    class_name = "secondary"
-    class_name = "primary" if event.primary
-    return class_name
+  def day_class(day)
+    classes=[]
+    classes << "weekend"   if day.weekend?
+    classes << "lesson"    if day.has_lesson?
+    classes << "primary"   if day.has_primary_event?
+    classes << "secondary" if day.has_event?
+    return classes.join(" ")
   end
 end

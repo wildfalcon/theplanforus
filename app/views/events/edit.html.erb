@@ -1,25 +1,6 @@
 <h1>Editing events</h1>
 
-<% form_for_resource do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :primary %><br />
-    <%= f.check_box :primary %>
-  </p>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render :partial => "form" %>
 
 <%= link_to 'Show', resource_path(@event) %> |
 <%= link_to 'Back', resources_path %>

@@ -1,22 +1,4 @@
 
 
-.day {
-clear:both;
-border:black solid 1px;
-width:100%;
-background:lightBlue;
-}
-
-.weekend{
-	background: pink;
-}
-.date {
-float:left;
-width:100px;
-background:pink;
-}
-.details {
-margin-left:10px;
-}
 
 

@@ -4,25 +4,13 @@ class Plan < ActiveRecord::Base
   def days
     @days ||= begin
       today = Time.now.to_date
-      start_day = Date.parse("#{(today+1.year).year}-01-01")
+      start_day = today
+      # start_day = Date.parse("#{(today+1.year).year}-01-01")
       days = {}
       (0..364).each do |d|
         date = start_day+d.days
-        days["#{date.year}#{date.yday}"]=Day.new(date)
+        days["#{date.year}#{date.yday}"]=Day.build(:date => date)
       end
-
-
-      # ical_filename = self.ical_feed
-      # 
-      #       if ical_filename
-      #         file = RIO.rio(ical_filename)  
-      #         Icalendar.parse(file.read).first.events.each do |event|
-      #           date = event.dtstart
-      #           if days["#{date.year}#{date.yday}"]
-      #             days["#{date.year}#{date.yday}"].events << event
-      #           end
-      #         end
-      #       end
       
       events.each do |event|
         date = event.date

@@ -1,9 +1,11 @@
-<div class="day <%= "weekend" if day.weekend? %> <%= "major" if day.has_major_event? %>">
-	&nbsp;
-	<span class="date"><%= day.display_date %></span>
-	<span class="details">
-		<% day.events.each do |event| %>
-			<%= event.summary%>
-		<% end %>
-	</span>
-</div>
+<tr class="<%= day_class(day) -%>">
+	<td><%= day.display_date -%></td>
+	<td><%- day.events.each do |event| -%>
+			<div class="<%= event_class(event) %>"><%= event.summary -%></div>
+		<%- end -%>
+		<%- day.lessons.each do |lesson| -%>
+				<div class="lesson"><%= lesson.teacher -%></div>
+			<%- end -%>
+	</td>
+</tr>
+

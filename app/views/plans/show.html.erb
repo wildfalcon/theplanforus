@@ -2,9 +2,9 @@
   <b>Name:</b>
   <%=h @plan.name %>
 </p>
-
-
-
-
-<%= link_to 'Edit', edit_plan_path(@plan) %> |
-<%= link_to 'Back', plans_path %>
+<div class="daily">
+<%= render :partial => "daily" %>
+</div>
+<div class="weekly">
+<%= render :partial => "weekly" %>
+</div>
