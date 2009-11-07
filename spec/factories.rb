@@ -7,3 +7,9 @@ Factory.define :event do |e|
   e.name "Blackpool"
   e.date Date.parse("2010-05-27")
 end
+
+Factory.define :lesson do |l|
+  l.start Time.now
+  l.end   Time.now
+  l.teacher "Albert Einstien"
+end

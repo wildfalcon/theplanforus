@@ -16,7 +16,7 @@ class Week
   end
   
   def contains?(date)
-    date > @start_date and date < start_date.end_of_week
+    date >= @start_date and date <= start_date.end_of_week
   end
 
   def number
@@ -25,6 +25,12 @@ class Week
 
   def events
     @events ||= []
+  end
+  
+  def lessons 
+    @lessons ||= begin
+      Lesson.all.select {|l| self.contains?(l.start.to_date)}
+    end
   end
 
   def has_primary_event?

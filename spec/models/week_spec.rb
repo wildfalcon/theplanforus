@@ -2,7 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Week do
   before(:each) do
-    @week = Factory.build(:week)
+    @week = Factory.build(:week, :date => Date.parse("2010-01-01"))
   end
 
   it "should have a start date at the begining of this week" do
@@ -11,6 +11,16 @@ describe Week do
 
   it "should know today is in the week" do
     @week.contains?(Date.parse("2010-01-01")).should == true
+  end
+
+  it "should recognise the first day of a week" do
+    # 3rd is last day of this week
+    @week.contains?(Date.parse("2009-12-28")).should == true 
+  end
+  
+  it "should recognise the last day of a week" do
+    # 3rd is last day of this week
+    @week.contains?(Date.parse("2010-01-03")).should == true 
   end
 
   it "should know if it contains a primary event" do
@@ -33,6 +43,12 @@ describe Week do
     event = Factory.build(:event, {:date => Date.parse("2010-01-01"), :primary => false})
     @week.events << event
     @week.events.should be_include(event)
+  end
+  
+  it "should know how many lessons it has" do
+    lesson_1 = Factory.create(:lesson, {:start => Date.parse("2010-01-01").to_time})
+    lesson_2 = Factory.create(:lesson, {:start => Date.parse("2010-01-01").to_time})
+    @week.lessons.size.should == 2
   end
   
 end
