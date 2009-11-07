@@ -1,6 +1,7 @@
 <tr class="<%= week_class(week) -%>">
-	<td><%= week.number %></td>
-	<td><div class="events"><%- week.events.each do |event| -%>
+	<td><%= week.number -%></td>
+	<td><%= week.lessons.size==0 ? "" : week.lessons.size -%></td>
+	<td class="event_details"><div class="events"><%- week.events.each do |event| -%>
 		  <span class="<%= event_class(event) -%>">
 			  <%=  event.summary -%>
 			</span>

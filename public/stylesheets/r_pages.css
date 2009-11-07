@@ -4,9 +4,11 @@ html.plans body.daily .month{margin-top:2px;}
 
 /*weekly view on plans controller*/
 html.plans body.weekly table {border-collapse: collapse;} /*odd but works in IE as well*/
-html.plans body.weekly table tr.event td{border-bottom: 1px solid #999; position: relative;}
-html.plans body.weekly table tr.primary_event td{border-bottom: 1px solid red; position: relative;}
+html.plans body.weekly table tr td{border: 1px solid #ccc; text-align: center;}
+html.plans body.weekly table tr td.event_details {border: 0px;  position: relative;}
+html.plans body.weekly table tr.event td{border-bottom: 2px solid #777; position: relative;}
+html.plans body.weekly table tr.primary_event td{border-bottom: 2px solid red; position: relative;}
 
 html.plans body.weekly table tr div.events{position: absolute}
-html.plans body.weekly table tr div.events span.secondary{background: #999; padding-left:4px;}
-html.plans body.weekly table tr div.events span.primary{background: red; padding-left:4px;}
+html.plans body.weekly table tr div.events span.secondary{background: #777; padding-left:4px; font-size:large;}
+html.plans body.weekly table tr div.events span.primary{background: red; padding-left:4px; font-size:large;}
