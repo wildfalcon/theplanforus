@@ -3,7 +3,7 @@ Factory.define :week do |w|
 end
 
 Factory.define :event do |e|
-  e.kind "major"
+  e.primary true
   e.name "Blackpool"
   e.date Date.parse("2010-05-27")
 end

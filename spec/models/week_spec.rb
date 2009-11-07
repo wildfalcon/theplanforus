@@ -13,26 +13,26 @@ describe Week do
     @week.contains?(Date.parse("2010-01-01")).should == true
   end
 
-  it "should know if it has a major event in" do
+  it "should know if it contains a primary event" do
     @week.events << Factory.build(:event, {:date => Date.parse("2010-01-01")})
-    @week.has_major_event?.should == true
+    @week.has_primary_event?.should == true
   end
 
-  it "should be able to return its major event" do
+  it "should be able to list its major events" do
     event = Factory.build(:event, {:date => Date.parse("2010-01-01")})
     @week.events << event
-    @week.major_event.should==event
+    @week.primary_events.should be_include(event)
   end
 
-  it "should know if it has a minor event in" do
-    @week.events << Factory.build(:event, {:date => Date.parse("2010-01-01"), :kind => "minor"})
-    @week.has_minor_event?.should == true
+  it "should know if it has an event in" do
+    @week.events << Factory.build(:event, {:date => Date.parse("2010-01-01"), :primary => false})
+    @week.has_event?.should == true
   end
 
-  it "should be able to return its minor event" do
-    event = Factory.build(:event, {:date => Date.parse("2010-01-01"), :kind => "minor"})
+  it "should be able to return its events" do
+    event = Factory.build(:event, {:date => Date.parse("2010-01-01"), :primary => false})
     @week.events << event
-    @week.minor_event.should==event
+    @week.events.should be_include(event)
   end
   
 end

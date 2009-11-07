@@ -15,7 +15,6 @@ class Week
     @start_date = date.beginning_of_week
   end
   
-
   def contains?(date)
     date > @start_date and date < start_date.end_of_week
   end
@@ -28,19 +27,15 @@ class Week
     @events ||= []
   end
 
-  def has_major_event?
-    !major_event.nil?
+  def has_primary_event?
+    primary_events.size>0
   end
 
-  def major_event
-    (events.select{|e| (e.class==Event and e.kind=="major")}||[]).first
+  def primary_events
+    events.select{|e| e.primary}||[]
   end
   
-  def has_minor_event?
-    !minor_event.nil?
-  end
-
-  def minor_event
-    (events.select{|e| (e.class==Event and e.kind=="minor")}||[]).first
+  def has_event?
+    events.size > 0
   end
 end

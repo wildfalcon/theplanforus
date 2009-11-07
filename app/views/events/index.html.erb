@@ -2,7 +2,8 @@
 
 <table>
   <tr>
-    <th>Kind</th>
+  
+    <th>Primary</th>
     <th>Name</th>
     <th>Date</th>
     <th>Plan</th>
@@ -10,7 +11,7 @@
 
 <% @events.each do |events| %>
   <tr>
-    <td><%=h events.kind %></td>
+    <td><%=h events.primary %></td>
     <td><%=h events.name %></td>
     <td><%=h events.date %></td>
     <td><%=h events.plan_id %></td>

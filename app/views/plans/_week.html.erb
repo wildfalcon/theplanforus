@@ -1,4 +1,8 @@
-<tr class="<%= "major" if week.has_major_event? %> <%= "minor" if week.has_minor_event? %>">
+<tr class="<%= week_class(week) -%>">
 	<td><%= week.number %></td>
-	<td><% if week.has_major_event? %><div class="major_tab"><%= week.major_event.summary%></div><% end %><% if week.has_minor_event? %><div class="minor_tab"><%= week.minor_event.summary%></div><% end %></td>
+	<td><div class="events"><%- week.events.each do |event| -%>
+		  <span class="<%= event_class(event) -%>">
+			  <%=  event.summary -%>
+			</span>
+	    <%- end -%></div></td>
 </tr>
