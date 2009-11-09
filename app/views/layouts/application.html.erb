@@ -6,8 +6,13 @@
 <head>
   <title>Dance Calendar</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-	<%= javascript_include_tag ['jquery-1.3.2', 'application'] %>
-	<%= stylesheet_link_tag :all, :cache => true %> 
+	<%= javascript_include_tag ['jquery-1.3.2', 
+		                          "jquery-ui-1.7.2.min", 
+		                          'application'] %>
+	<%= stylesheet_link_tag ['defaults', 
+		                       'shared', 
+		                       'pages', 
+		                       'jquery-ui-1.7.2.custom'], :cache => true %> 
 </head>
 <body class="<%= controller.action_name -%>">
 <p style="color: green"><%= flash[:notice] %></p>

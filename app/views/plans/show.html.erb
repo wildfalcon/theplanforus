@@ -1,10 +1,21 @@
-<p>
-  <b>Name:</b>
-  <%=h @plan.name %>
-</p>
-<div class="daily">
-<%= render :partial => "daily" %>
+
+
+<div id="plan_tabs">
+	<ul>
+		<li><a href="#weekly">Weekly</a></li>
+		<li><a href="#daily">Daily</a></li>
+	</ul>
+	<div id="daily">
+		<%= render :partial => "daily" %>
+	</div>
+	<div id="weekly">
+		<%= render :partial => "weekly" %>
+	</div>
 </div>
-<div class="weekly">
-<%= render :partial => "weekly" %>
-</div>
+
+
+<script type="text/javascript">
+	$(function() {
+		$("#plan_tabs").tabs();
+	});
+</script>
