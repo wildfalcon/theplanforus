@@ -1,5 +1,6 @@
 class Plan < ActiveRecord::Base
   has_many :events
+  has_many :lessons
 
   def days
     @days ||= begin

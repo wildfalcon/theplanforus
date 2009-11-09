@@ -41,7 +41,7 @@ class Day
   
   def lessons 
     @lessons ||= begin
-      Lesson.all.select {|l| self.date==l.start.to_date}
+      Lesson.all.select {|l| self.date==l.date}
     end
   end
   

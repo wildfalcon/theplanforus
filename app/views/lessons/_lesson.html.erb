@@ -1,0 +1,7 @@
+<tr>
+  <td><%=h lesson.teacher %></td>
+  <td><%=h lesson.date.strftime("%a %e %b") %></td>
+  <td><%=h lesson.start.strftime("%H:%M") %></td>
+  <td><%=h lesson.end.strftime("%H:%M") %></td>
+  <td><%= link_to 'Destroy', resource_path(lesson), :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>

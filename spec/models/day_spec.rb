@@ -27,17 +27,17 @@ describe Day do
      @day.events.should be_include(event)
    end
 
-   it "should if it has a lesson" do
-     lesson_1 = Factory.create(:lesson, {:start => Date.parse("2010-01-01").to_time})
-     lesson_2 = Factory.create(:lesson, {:start => Date.parse("2010-01-01").to_time})
-     @day.has_lesson?.should == true
-   end
-    
-   it "should know how many lessons it has" do
-     lesson_1 = Factory.create(:lesson, {:start => Date.parse("2010-01-01").to_time})
-     lesson_2 = Factory.create(:lesson, {:start => Date.parse("2010-01-01").to_time})
-     @day.lessons.size.should == 2
-   end
+   it "should if it has a lesson" do                                      
+     lesson_1 = Factory.create(:lesson, {:date => Date.parse("2010-01-01")})
+     lesson_2 = Factory.create(:lesson, {:date => Date.parse("2010-01-01")})
+     @day.has_lesson?.should == true                                       
+   end                                                                     
+                                                                           
+   it "should know how many lessons it has" do                             
+     lesson_1 = Factory.create(:lesson, {:date => Date.parse("2010-01-01")})
+     lesson_2 = Factory.create(:lesson, {:date => Date.parse("2010-01-01")})
+     @day.lessons.size.should == 2                                         
+   end                                                                     
 
   
 end

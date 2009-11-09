@@ -45,9 +45,9 @@ describe Week do
     @week.events.should be_include(event)
   end
   
-  it "should know how many lessons it has" do
-    lesson_1 = Factory.create(:lesson, {:start => Date.parse("2010-01-01").to_time})
-    lesson_2 = Factory.create(:lesson, {:start => Date.parse("2010-01-01").to_time})
+  it "should know how many lessons it has" do                            
+    lesson_1 = Factory.create(:lesson, {:date => Date.parse("2010-01-01")})
+    lesson_2 = Factory.create(:lesson, {:date => Date.parse("2010-01-01")})
     @week.lessons.size.should == 2
   end
   

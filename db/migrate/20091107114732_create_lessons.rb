@@ -1,9 +1,11 @@
 class CreateLessons < ActiveRecord::Migration
   def self.up
     create_table :lessons do |t|
-      t.datetime :start
-      t.datetime :end
+      t.date :date
+      t.time :start
+      t.time :end
       t.string :teacher
+      t.integer :plan_id
 
       t.timestamps
     end

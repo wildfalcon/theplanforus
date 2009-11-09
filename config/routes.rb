@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :plans, :member => { :daily => :get, :weekly => :get } do |plan|
     plan.resources :events
+    plan.resources :lessons
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

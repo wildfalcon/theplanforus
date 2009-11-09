@@ -13,6 +13,7 @@ Factory.define :event do |e|
 end
 
 Factory.define :lesson do |l|
+  l.date Date.parse("2010-05-27")
   l.start Time.now
   l.end   Time.now
   l.teacher "Albert Einstien"
