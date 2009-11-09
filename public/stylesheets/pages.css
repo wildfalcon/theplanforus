@@ -2,8 +2,8 @@
 html.plans body.daily .month{margin-top:2px;}
 
 /*index view on plans controller*/
-html.plans body.show div#plan_tabs{width: 300px;}
-
+html.plans body.show div#plan_tabs{float:left; width: 300px; margin-right:30px;}
+html.plans body.show div#event_tabs{float:left; width: 700px;}
 
 /*weekly view on plans controller*/
 html.plans #weekly table {border-collapse: collapse;} /*odd but works in IE as well*/
@@ -24,11 +24,11 @@ html.plans #daily table tr.secondary {background: #777;}
 html.plans #daily table tr.primary {background: red;}
 
 /*index view on events controller*/
-html.events body.index tr.primary {background: red;}
-html.events body.index tr.secondary {background: #777;}
-html.events body.index form div.inputs {margin-bottom: 10px;}
-html.events body.index form div.inputs div {float:left; margin-left: 10px;}
+#events tr.primary {background: red;}
+#events tr.secondary {background: #777;}
+#events form div.inputs {margin-bottom: 10px;}
+#events form div.inputs div {float:left; margin-left: 10px;}
 
 /*index view on lessons controller*/
-html.lessons body.index form div.inputs {margin-bottom: 10px;}
-html.lessons body.index form div.inputs div {float:left; margin-left: 10px;}
+#lessons form div.inputs {margin-bottom: 10px;}
+#lessons form div.inputs div {float:left; margin-left: 10px;}

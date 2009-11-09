@@ -1,5 +1,5 @@
 <tr class="<%= event_class(event) %>">
   <td><%=h event.name %></td>
   <td><%=h event.date %></td>
-  <td><%= link_to 'Destroy', resource_path(event), :confirm => 'Are you sure?', :method => :delete %></td>
+  <td><%= link_to 'Destroy', plan_event_path(event), :confirm => 'Are you sure?', :method => :delete %></td>
 </tr>

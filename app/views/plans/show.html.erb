@@ -13,9 +13,94 @@
 	</div>
 </div>
 
+<div id="event_tabs">
+	<ul>
+		<li><a href="#events">Events</a></li>
+		<li><a href="#lessons">Lessons</a></li>
+	</ul>
+	<div id="events">
+		<table>
+		  <tr>
+		    <th>Name</th>
+		    <th>Date</th>
+		  </tr>
+
+
+		<%= render :partial => @plan.events %>
+		</table>
+
+		<% form_tag(plan_events_url(@plan)) do  %>
+		 <div class="inputs clearfix">
+		  <div>
+		    <%= label_tag :primary %><br />
+		    <%= check_box :event, :primary %>
+		  </div>
+
+		  <div>
+		    <%= label_tag :name %><br />
+		    <%= text_field :event, :name %>
+		  </div>
+
+		  <div>
+		    <%= label_tag :date %><br />
+				<%= date_select :event, :date %> 
+		  </div>
+		</div>
+		  <div>
+		    <%= submit_tag 'Submit' %>
+		  </div>
+		<% end %>
+	</div>
+	
+	
+	<div id="lessons">
+		<table>
+		  <tr>
+		    <th>Teacher</th>
+		    <th>Date</th>
+		    <th>Start</th>
+		    <th>End</th>
+		  </tr>
+
+
+		<%= render :partial => @plan.lessons %>
+		</table>
+
+		<% form_tag(plan_lessons_url(@plan)) do  %>
+		 <div class="inputs clearfix">
+		  <div>
+		    <%= label_tag :teacher %><br />
+		    <%= text_field :lesson, :teacher %>
+		  </div>
+
+		  <div>
+		    <%= label_tag :date %><br />
+		    <%= date_select :lesson, :date %>
+		  </div>
+
+		  <div>
+		    <%= label_tag :start %><br />
+				<%= time_select :lesson, :start %> 
+		  </div>
+
+		  <div>
+		    <%= label_tag :end %><br />
+				<%= time_select :lesson, :end %> 
+		  </div>
+
+		</div>
+		  <div>
+		    <%= submit_tag 'Submit' %>
+		  </div>
+		<% end %>
+	</div>
+	
+	
+</div>
 
 <script type="text/javascript">
 	$(function() {
 		$("#plan_tabs").tabs();
+		$("#event_tabs").tabs();
 	});
 </script>

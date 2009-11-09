@@ -7,7 +7,7 @@ class LessonsController < ApplicationController
      @lesson.plan_id = params[:plan_id]
      if @lesson.save
        flash[:notice] = 'lesson was successfully created.'
-       redirect_to(plan_lessons_url) 
+       redirect_to(plan_path(params[:plan_id])) 
      else
        render :action => "new" 
      end
