@@ -1,9 +1,11 @@
-<table>
-	<tr>
-		<th>Date</th>
-		<th>Description</th>
-	</tr>
+<div id="daily">
+	<table>
+		<tr>
+			<th>Date</th>
+			<th>Description</th>
+		</tr>
 	
 	
-<%= render :partial => "day", :collection => @plan.days %>
-</table>
+	<%= render :partial => "day", :collection => @plan.days %>
+	</table>
+</div>

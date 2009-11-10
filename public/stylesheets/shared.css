@@ -1,2 +1,37 @@
-/*Required for jQuery tabs*/
-.ui-tabs .ui-tabs-hide {display: none;}
+/*Header*/
+#header {color: #FFFFFF; background: #654b24 url(images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat;}
+#header {height: 100px;}
+
+/*weekly div */
+div#weekly table {border-collapse: collapse;} /*odd but works in IE as well*/
+div#weekly table tr td{border: 1px solid #ccc; text-align: center;}
+div#weekly table tr td.event_details {border: 0px;  position: relative;}
+div#weekly table tr.event td{border-bottom: 2px solid #140F06; position: relative;}
+div#weekly table tr.primary_event td{border-bottom: 2px solid #140F06; position: relative;}
+div#weekly table tr div.events{position: absolute}
+div#weekly table tr div.events span{padding: 0 4px 0 4px; font-size:large; }
+div#weekly table tr div.events span.primary{color: #140F06; background: #FFFFFF url(images/ui-bg_fine-grain_15_ffffff_60x60.png) repeat scroll 50% 50%; border: 1px solid #140F06;}
+div#weekly table tr div.events span.secondary{color: #FFFFFF; background: #654b24 url(images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat; }
+
+/*daily div*/
+div#daily table {border-collapse: collapse;} /*odd but works in IE as well*/
+div#daily table tr td{border: 1px solid #ccc; text-align: center; padding: 0 4px 0 4px;}
+div#daily table tr.weekend{ background: #FFC;}
+div#daily table tr.lesson{ background: #0F0;}
+div#daily table tr.secondary {color: #FFFFFF; background: #654b24 url(images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat;}
+div#daily table tr.primary {color: #140F06; background: #FFFFFF url(images/ui-bg_fine-grain_15_ffffff_60x60.png) repeat scroll 50% 50%;}
+div#daily table tr.primary td{border: 2px solid #140F06;}
+
+/*events div*/
+#events tr.secondary{color: #FFFFFF; background: #654b24 url(images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat;}
+#events tr.primary{color: #140F06; background: #FFFFFF url(images/ui-bg_fine-grain_15_ffffff_60x60.png) repeat scroll 50% 50%; border: 1px solid #140F06;}
+#events tr.primary td{border: 2px solid #140F06;}
+#events form div.inputs {margin-bottom: 10px;}
+#events form div.inputs div {float:left; margin-left: 10px;}
+
+/*lessons div*/
+#lessons form div.inputs {margin-bottom: 10px;}
+#lessons form div.inputs div {float:left; margin-left: 10px;}
+
+
+

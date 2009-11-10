@@ -1,0 +1,33 @@
+<div id="events">
+	<table>
+	  <tr>
+	    <th>Name</th>
+	    <th>Date</th>
+	  </tr>
+
+
+	<%= render :partial => events %>
+	</table>
+
+	<% form_tag(plan_events_url(plan)) do  %>
+	 <div class="inputs clearfix">
+	  <div>
+	    <%= label_tag :primary %><br />
+	    <%= check_box :event, :primary %>
+	  </div>
+
+	  <div>
+	    <%= label_tag :name %><br />
+	    <%= text_field :event, :name %>
+	  </div>
+
+	  <div>
+	    <%= label_tag :date %><br />
+			<%= date_select :event, :date %> 
+	  </div>
+	</div>
+	  <div>
+	    <%= submit_tag 'Submit' %>
+	  </div>
+	<% end %>
+</div>
