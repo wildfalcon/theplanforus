@@ -1,5 +1,6 @@
 class LessonsController < ApplicationController
   resources_controller_for :lessons
+
   
   
   def create
