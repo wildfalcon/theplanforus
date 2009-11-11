@@ -16,4 +16,8 @@ class Event < ActiveRecord::Base
   def preceeding_events
     plan.events.before(self.date)
   end
+  
+  def number_of_days_remaining
+    (self.date-Time.now.to_date).to_i
+  end
 end
