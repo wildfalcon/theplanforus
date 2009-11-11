@@ -1,11 +1,20 @@
-<div id="weekly">
-	<table>
-	<tr>
-		<th>No.</th>
-		<th>Les</th>
+<div id="weekly" class="clearfix">
+	<div id="events_list"
+		<table>
+		<tr>
+			<th>No.</th>
+			<th>Les</th>
 
-	</tr>
+		</tr>
 
-<%= render :partial => "week", :collection => weeks %>
-</table>
+	  <%= render :partial => "week", :collection => weeks %>
+	  </table>
+	</div>
+	
+	<%- if detailed_event -%>
+		<div id="next_event">
+			<h2>Next Primary Event</h2>
+			<%= render :partial => "events/event_detail", :locals => {:event => detailed_event} %>
+		</div>
+	<%- end -%>
 </div>

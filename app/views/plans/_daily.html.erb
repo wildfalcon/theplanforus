@@ -1,11 +1,30 @@
-<div id="daily">
-	<table>
-		<tr>
-			<th>Date</th>
-			<th>Description</th>
-		</tr>
+<div id="daily" class="clearfix">
+	<div id="events_list">
+		<table>
+			<tr>
+				<th>Date</th>
+				<th>Description</th>
+			</tr>
+		<%= render :partial => "day", :collection => @plan.days %>
+		</table>
+	</div>
 	
 	
-	<%= render :partial => "day", :collection => @plan.days %>
-	</table>
+	<%- if detailed_event -%>
+		<div id="next_event">
+			<h2>Next Primary Event</h2>
+			<%= render :partial => "events/event_detail", :locals => {:event => detailed_event} %>
+		</div>
+	<%- end -%>
 </div>
+
+
+
+
+
+
+
+
+
+
+

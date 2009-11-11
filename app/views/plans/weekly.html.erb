@@ -1,1 +1,1 @@
-<%= render :partial => "weekly", :locals => {:weeks => @plan.weeks} %>
+<%= render :partial => "weekly", :locals => {:weeks => @plan.weeks, :detailed_event => @plan.primary_events.first} %>
