@@ -11,7 +11,7 @@ class Plan < ActiveRecord::Base
       days = {}
       (0..364).each do |d|
         date = start_day+d.days
-        days["#{date.year}#{date.yday}"]=Day.build(:date => date)
+        days["#{date.year}#{date.yday}"]=Day.build(:date => date, :plan => self)
       end
       
       events.each do |event|
@@ -32,7 +32,7 @@ class Plan < ActiveRecord::Base
       today = Time.now.to_date.beginning_of_week
       (0..51).each do |w|
         date=today+w.weeks
-        weeks["#{date.year}#{date.yday}"]=Week.build(:date => date)
+        weeks["#{date.year}#{date.yday}"]=Week.build(:date => date, :plan => self)
       end
       
       events.each do |event|

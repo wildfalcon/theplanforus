@@ -10,6 +10,7 @@ class Week
   end
 
   attr_reader :start_date
+  attr_accessor :plan
 
   def date=(date)
     @start_date = date.beginning_of_week
@@ -29,7 +30,7 @@ class Week
   
   def lessons 
     @lessons ||= begin
-      Lesson.all.select {|l| self.contains?(l.date)}
+      plan.lessons.select {|l| self.contains?(l.date)}
     end
   end
 

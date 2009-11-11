@@ -33,7 +33,7 @@ class Day
   #     @days.sort!{|a,b| a.date <=> b.date}
   #   end
   
-  attr_accessor :date
+  attr_accessor :date, :plan  
     
   def events
     @events ||= []
@@ -41,7 +41,7 @@ class Day
   
   def lessons 
     @lessons ||= begin
-      Lesson.all.select {|l| self.date==l.date}
+      plan.lessons.select {|l| self.date==l.date}
     end
   end
   
