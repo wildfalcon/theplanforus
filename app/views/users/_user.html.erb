@@ -1,24 +1,24 @@
 <% form_for @user do |form| %>  
 <%= form.error_messages %>  
-<ol class="formList">  
-  <li>  
+
+  <div>  
     <%= form.label :username, "Username" %>  
     <%= form.text_field :username %>  
-  </li>  
-  <li>  
+  </div>  
+  <div>  
     <%= form.label :email, "Email" %>  
     <%= form.text_field :email %>  
-  </li>  
-  <li>  
+  </div>  
+  <div>  
     <%= form.label :password, "Password" %>  
     <%= form.password_field :password %>  
-  </li>  
-  <li>  
+  </div>  
+  <div>  
     <%= form.label :password_confirmation, "Password confirmation" %>  
     <%= form.password_field :password_confirmation %>  
-  </li>  
-  <li>  
+  </div>  
+  <div>  
     <%= form.submit "Submit" %>  
-  </li>  
-</ol>  
+  </div>  
+
 <% end %>

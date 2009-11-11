@@ -15,9 +15,9 @@
 		                       'pages'], :cache => true %> 
 </head>
 <body class="<%= controller.action_name -%>">
-	<div id="header">
-		<div id="user_nav">  
-		  <% if current_user %>  
+	<div id="header" class="ui-corner-all">
+		<div id="user_nav" class="ui-corner-all">  
+		  <% if current_user %>  Hello <%= current_user.username %>, 
 		    <%= link_to "Edit profile", edit_user_path(:current) %> |
 		    <%= link_to "Logout", logout_path %>  
 		  <% else %>  
@@ -27,7 +27,9 @@
 		</div>
 	</div>
 <p style="color: green"><%= flash[:notice] %></p>
-<%= yield %>
 
+<div class="ui-corner-all ui-widget-content">
+<%= yield %>
+</div>
 </body>
 </html>
