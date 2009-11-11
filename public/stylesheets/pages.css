@@ -4,3 +4,10 @@ html.plans body.daily .month{margin-top:2px;}
 /*index view on plans controller*/
 html.plans body.show div#plan_tabs{float:left; width: 300px; margin-right:30px;}
 html.plans body.show div#event_tabs{float:left; width: 700px;}
+
+/*html.user_sessions div#login_form{margin:0px auto; width: 400px;}*/
+html.user_sessions  body {text-align: center; }
+html.user_sessions  body form div{margin-top:5px; }
+
+html.users  body {text-align: center; }
+html.users  body form div{margin-top:5px; }
