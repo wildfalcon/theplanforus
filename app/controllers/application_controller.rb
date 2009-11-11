@@ -7,15 +7,28 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password
-  
+
   helper_method :current_user  
-    
+
   private  
   def current_user_session  
     @current_user_session ||= UserSession.find  
   end  
-    
+
   def current_user  
     @current_user ||= current_user_session && current_user_session.record  
+  end
+
+  def logged_in?
+    !!current_user
+  end
+
+  def login_required
+    logged_in? || access_denied
+  end
+
+  def access_denied
+    flash[:error] = "You need to be logged in to access this page"
+    redirect_to login_path
   end
 end

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091111183038) do
+ActiveRecord::Schema.define(:version => 20091111191823) do
 
   create_table "events", :force => true do |t|
     t.string   "kind"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20091111183038) do
     t.string   "ical_feed"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|

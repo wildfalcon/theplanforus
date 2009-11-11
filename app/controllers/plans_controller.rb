@@ -1,34 +1,36 @@
 class PlansController < ApplicationController
+  before_filter :login_required
+
 
   def index
-    @plans = Plan.all
+    @plans = current_user.plans
   end
 
   def weekly
-    @plan = Plan.find(params[:id])
+    @plan = current_user.plans.find(params[:id])
   end
 
   def daily
-    @plan = Plan.find(params[:id])
+    @plan = current_user.plans.find(params[:id])
   end
 
   def show
-    @plan = Plan.find(params[:id])
+    @plan = current_user.plans.find(params[:id])
   end
 
 
   def new
-    @plan = Plan.new
+    @plan = current_user.plans.new
   end
 
 
   def edit
-    @plan = Plan.find(params[:id])
+    @plan = current_user.plans.find(params[:id])
   end
 
 
   def create
-    @plan = Plan.new(params[:plan])
+    @plan = current_user.plans.new(params[:plan])
     if @plan.save
       flash[:notice] = 'Plan was successfully created.'
       redirect_to(@plan) 
@@ -38,9 +40,8 @@ class PlansController < ApplicationController
 
   end
 
-
   def update
-    @plan = Plan.find(params[:id])
+    @plan = current_user.plans.find(params[:id])
     if @plan.update_attributes(params[:plan])
       flash[:notice] = 'Plan was successfully updated.'
       redirect_to(@plan) 
@@ -49,10 +50,8 @@ class PlansController < ApplicationController
     end
   end
 
-  # DELETE /plans/1
-  # DELETE /plans/1.xml
   def destroy
-    @plan = Plan.find(params[:id])
+    @plan = current_user.plans.find(params[:id])
     @plan.destroy
     redirect_to(plans_url)
   end

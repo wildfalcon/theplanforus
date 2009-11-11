@@ -18,3 +18,10 @@ Factory.define :lesson do |l|
   l.end   Time.now
   l.teacher "Albert Einstien"
 end
+
+Factory.define :user do |u|
+  u.sequence(:username) { |n| "foo#{n}" } 
+  u.password "foobar"  
+  u.password_confirmation { |usr| usr.password }  
+  u.sequence(:email) {|n| "foo#{n}@example.com"}
+end
