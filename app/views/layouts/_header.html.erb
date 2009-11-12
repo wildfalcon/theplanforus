@@ -1,0 +1,16 @@
+<div id="header" class="ui-corner-all">
+	<div class="central">
+		<div id="title_banner" class="ui-corner-all">
+			<span>ThePlanFor</span>.us
+		</div>
+		<div id="user_nav" class="ui-corner-all">  
+		  <% if current_user %>  Hello <%= current_user.username %>, 
+		    <%= link_to "Edit profile", edit_user_path(:current) %> |
+		    <%= link_to "Logout", logout_path %>  
+		  <% else %>  
+		    <%= link_to "Register", new_user_path %>  |
+		    <%= link_to "Log in", login_path %>  
+		  <% end %>  
+		</div>
+	</div>
+</div>

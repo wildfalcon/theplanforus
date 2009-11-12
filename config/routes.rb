@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.root :controller => "plans", :action => "index"
+  map.root :controller => "home", :action => "index"
 
   map.resources :users  
   
