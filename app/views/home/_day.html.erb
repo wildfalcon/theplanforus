@@ -1,9 +1,0 @@
-<div class="day <%= "weekend" if day.weekend? %> <%= "major" if day.has_major_event? %>">
-	&nbsp;
-	<span class="date"><%= day.display_date %></span>
-	<span class="details">
-		<% day.events.each do |event| %>
-			<%= event.summary%>
-		<% end %>
-	</span>
-</div>
