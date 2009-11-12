@@ -22,8 +22,8 @@ div#weekly table tr.event td{border-bottom: 2px solid #140F06; position: relativ
 div#weekly table tr.primary_event td{border-bottom: 2px solid #140F06; position: relative;}
 div#weekly table tr div.events{position: absolute}
 div#weekly table tr div.events span{padding: 0 4px 0 4px; font-size:large; }
-div#weekly div#events_list{float:left; width: 400px;}
-div#weekly div#next_event{float:left; width: 400px;}
+div#weekly div#events_list{float:left; width: 380px;}
+div#weekly div#next_event{float:left; width: 360px;}
 
 /*Event detail box*/
 .event_detail{padding:10px;}
