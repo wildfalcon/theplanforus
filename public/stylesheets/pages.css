@@ -1,14 +1,21 @@
 html.home body.index div#splash{height: 300px;}
 html.home body.index div#splash div#description{height:100%; width:300px; float:left;}
 html.home body.index div#splash div#description h1{margin-bottom:20px;}
-html.home body.index div#splash div#description div#signup{background: #b83400 url(images/ui-bg_fine-grain_68_b83400_60x60.png) 50% 50% repeat; color: #ffffff;  font-size:26px; color:white; border: 3px solid black; padding: 4px; text-align:center; width: 80%; margin: 33px auto;}
+html.home body.index div#splash div#description div#signup{background: #b83400 url(images/ui-bg_fine-grain_68_b83400_60x60.png) 50% 50% repeat; color: #ffffff;  font-size:20px; color:white; border: 3px solid black; padding: 4px; text-align:center; width: 80%; margin: 33px auto;}
+html.home body.index div#splash div#description div#signup span.cta{font-size:26px; }
 html.home body.index div#splash div#picture{height:100%; width: 500px; float:left;}
 html.home body.index div#splash div#picture img{height:270px; width: 400px; margin: 20px 0 0 40px;}
-
-
 html.home body.index div#details div#description_2{height:100px; width: 100%;}
 html.home body.index div#details div#features{height:100px; width: 100%;}
 html.home body.index div#details div#features div.feature{margin: 0 40px;background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; border: 3px solid black; padding: 4px; text-align:center; ; height:90px; width: 160px; float:left;}
+
+
+html.home body.prices div#price_plans {width: 700px; margin: 30px auto; text-align:center;}
+html.home body.prices div#price_plans .feature{text-align:right;}
+html.home body.prices div#price_plans th {width: 270px;}
+html.home body.prices div#price_plans div.signup{background: green;color: #ffffff;  font-size:16px; color:white; border: 3px solid black; padding: 2px; text-align:center; width: 90%; margin: 33px auto;}
+
+html.home body.signup div{text-align: center;}
 
 /*daily view on plans controller*/
 html.plans body.daily .month{margin-top:2px;}
