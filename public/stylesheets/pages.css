@@ -1,5 +1,6 @@
 html.home body.index div#splash{height: 300px;}
 html.home body.index div#splash div#description{height:100%; width:300px; float:left;}
+html.home body.index div#splash div#description h1{margin-bottom:20px;}
 html.home body.index div#splash div#description div#signup{background: #b83400 url(images/ui-bg_fine-grain_68_b83400_60x60.png) 50% 50% repeat; color: #ffffff;  font-size:26px; color:white; border: 3px solid black; padding: 4px; text-align:center; width: 80%; margin: 33px auto;}
 html.home body.index div#splash div#picture{height:100%; width: 500px; float:left;}
 html.home body.index div#splash div#picture img{height:270px; width: 400px; margin: 20px 0 0 40px;}

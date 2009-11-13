@@ -1,5 +1,5 @@
 /*Header*/
-#header {color: #FFFFFF; background: #654b24 url(images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat;}
+#header {color: #FFFFFF; background: #654b24 url(images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat; margin-bottom: 20px;}
 #header {height: 100px;}
 
 #user_nav {float: right; font-size: 0.9em; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; margin: 20px 0 0 0; padding: 3px; color:black;}
@@ -50,4 +50,4 @@ div#daily div#next_event{float:left; width: 400px;}
 #lessons form div.inputs div {float:left; margin-left: 10px;}
 
 
-
+#footer{background:black;}

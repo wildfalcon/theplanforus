@@ -1,7 +1,17 @@
+* {margin:0;padding:0;} 
 body {font-family: georgia,times;}
-h1 {font-family: helvetica,arial,sans-serif;font-weight: bold; font-size: 30px; text-align: center;}
-h2 {font-size:20px; text-align: left; font-weight: normal;}
+h1 {font-family: helvetica,arial,sans-serif;font-weight: bold; font-size: 30px; text-align: center; margin: 8px 0;}
+h2 {font-size:20px; text-align: left; font-weight: normal; margin: 8px 0;}
 
+html, body, #wrap {height: 100%;}
+body > #wrap {height: auto; min-height: 100%;}
+
+#main {padding-bottom: 150px; min-height: 100%;}  /* must be same height as the footer */
+
+#footer {position: relative;
+	margin-top: -150px; /* negative value of footer height */
+	height: 150px;
+	clear:both;}
 
 /* clear fix utility */
 .clearfix:after {
