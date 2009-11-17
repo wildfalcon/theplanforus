@@ -15,7 +15,7 @@ describe Day do
      @day.events << event
      @day.primary_events.should be_include(event)
    end
-
+   
    it "should know if it has an event in" do
      @day.events << Factory.build(:event, {:date => Date.parse("2010-01-01"), :primary => false})
      @day.has_event?.should == true
@@ -27,15 +27,15 @@ describe Day do
      @day.events.should be_include(event)
    end
 
-   it "should if it has a lesson" do                                      
-     lesson_1 = Factory.create(:lesson, {:date => Date.parse("2010-01-01")})
-     lesson_2 = Factory.create(:lesson, {:date => Date.parse("2010-01-01")})
+   it "should know if it has a lesson" do                                      
+     lesson_1 = Factory.create(:lesson, {:date => Date.parse("2010-01-01"), :plan => @day.plan})
+     lesson_2 = Factory.create(:lesson, {:date => Date.parse("2010-01-01"), :plan => @day.plan})
      @day.has_lesson?.should == true                                       
    end                                                                     
                                                                            
    it "should know how many lessons it has" do                             
-     lesson_1 = Factory.create(:lesson, {:date => Date.parse("2010-01-01")})
-     lesson_2 = Factory.create(:lesson, {:date => Date.parse("2010-01-01")})
+     lesson_1 = Factory.create(:lesson, {:date => Date.parse("2010-01-01"), :plan => @day.plan})
+     lesson_2 = Factory.create(:lesson, {:date => Date.parse("2010-01-01"), :plan => @day.plan})
      @day.lessons.size.should == 2                                         
    end                                                                     
 

@@ -1,9 +1,15 @@
+Factory.define :plan do |p|
+  p.sequence(:name) {|n| "Plan_#{n}"}
+end
+
 Factory.define :week do |w|
   w.date Date.parse("2010-01-01")
+  w.plan {|plan| plan.association(:plan)}
 end
 
 Factory.define :day do |d|
   d.date Date.parse("2010-01-01")
+  d.plan {|plan| plan.association(:plan)}
 end
 
 Factory.define :event do |e|
@@ -17,6 +23,7 @@ Factory.define :lesson do |l|
   l.start Time.now
   l.end   Time.now
   l.teacher "Albert Einstien"
+  l.plan {|plan| plan.association(:plan)}
 end
 
 Factory.define :user do |u|

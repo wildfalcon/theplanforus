@@ -46,8 +46,8 @@ describe Week do
   end
   
   it "should know how many lessons it has" do                            
-    lesson_1 = Factory.create(:lesson, {:date => Date.parse("2010-01-01")})
-    lesson_2 = Factory.create(:lesson, {:date => Date.parse("2010-01-01")})
+    lesson_1 = Factory.create(:lesson, {:date => Date.parse("2010-01-01"), :plan => @week.plan})
+    lesson_2 = Factory.create(:lesson, {:date => Date.parse("2010-01-01"), :plan => @week.plan})
     @week.lessons.size.should == 2
   end
   
