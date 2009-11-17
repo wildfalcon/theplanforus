@@ -1,22 +1,28 @@
 <% form_for @user do |form| %>  
 <%= form.error_messages %>  
-
-  <div>  
-    <%= form.label :username, "Username" %>  
-    <%= form.text_field :username %>  
-  </div>  
-  <div>  
-    <%= form.label :email, "Email" %>  
-    <%= form.text_field :email %>  
-  </div>  
-  <div>  
-    <%= form.label :password, "Password" %>  
-    <%= form.password_field :password %>  
-  </div>  
-  <div>  
-    <%= form.label :password_confirmation, "Password confirmation" %>  
-    <%= form.password_field :password_confirmation %>  
-  </div>  
+  <div class="clearfix">
+		<div id="user_details">
+		  <div>  
+		    <div class="label"><%= form.label :username, "Username" %> </div>
+		    <%= form.text_field :username %>  
+		  </div>  
+		  <div>  
+		     <div class="label"><%= form.label :email, "Email" %> </div> 
+		    <%= form.text_field :email %>  
+		  </div>  
+		  <div>  
+		     <div class="label"><%= form.label :password, "Password" %>  </div>
+		    <%= form.password_field :password %>  
+		  </div>  
+		  <div>  
+		     <div class="label"><%= form.label :password_confirmation, "Password confirmation" %>  </div>
+		    <%= form.password_field :password_confirmation %>  
+		  </div>  
+	  </div>
+		<div id="plan_details">
+			hello some stuff here
+		</div>
+	</div>
   <div>  
     <%= form.submit "Submit" %>  
   </div>  
