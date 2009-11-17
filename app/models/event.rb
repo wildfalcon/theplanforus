@@ -9,6 +9,10 @@ class Event < ActiveRecord::Base
     name
   end
   
+  def date=(date_string)
+    write_attribute(:date, Date.parse(date_string))
+  end
+  
   def preceeding_lessons
     plan.lessons.before(self.date)
   end

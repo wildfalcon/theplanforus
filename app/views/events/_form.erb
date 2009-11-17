@@ -1,5 +1,5 @@
  <div class="inputs clearfix">
-  <div>
+  <div class="center">
     <%= label_tag :primary %><br />
     <%= check_box :event, :primary %>
   </div>
@@ -11,9 +11,16 @@
 
   <div>
     <%= label_tag :date %><br />
-		<%= date_select :event, :date %> 
+		<%= text_field :event, :date, {:size=>"10",:class => "datepicker"} %> 
   </div>
-</div>
-  <div>
+	<div>
     <%= submit_tag 'Submit' %>
   </div>
+</div>
+  
+	<script type="text/javascript">
+	$(function() {
+		$(".datepicker").datepicker();
+	});
+	</script>
+

@@ -1,10 +1,8 @@
 /*Header*/
 #header {color: #FFFFFF; background: #654b24 url(images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat; margin-bottom: 20px;}
 #header {height: 100px;}
-
 #user_nav {float: right; font-size: 0.9em; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; margin: 20px 0 0 0; padding: 3px; color:black;}
 #user_nav a{color:black;}
-
 #title_banner{float: left; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; margin: 20px 0 0 0; padding: 3px; color:black;}
 #title_banner span{font-size: xx-large;}
 
@@ -41,11 +39,21 @@ div#daily div#events_list{float:left; width: 400px;}
 div#daily div#next_event{float:left; width: 400px;}
 
 /*events div*/
-#events tr.primary td{border: 2px solid #140F06;}
+#events .event{height: 60px;}
+#events .new_event{border: 1px solid #b2a266; background: white; height: 80px;}
+#events .new_event INPUT[type='submit']{margin-top: 19px;}
+#events .new_event .center{text-align: center;}
+#events .event h2{float:left; margin: 4px;}
+#events .event .date{float:right; margin: 4px;}
+#events .event .commands{font-size: small; float:right; margin: 4px;}
 #events form div.inputs {margin-bottom: 10px;}
 #events form div.inputs div {float:left; margin-left: 10px;}
 
 /*lessons div*/
+#lessons .lesson {height: 60px; border: 1px solid #b2a266;}
+#lessons .lesson  h2{float:left; margin: 4px;}
+#lessons .lesson  .date{float:right; margin: 4px;}
+#lessons .lesson  .commands{font-size: small; float:right; margin: 4px;}
 #lessons form div.inputs {margin-bottom: 10px;}
 #lessons form div.inputs div {float:left; margin-left: 10px;}
 

@@ -13,6 +13,16 @@ body > #wrap {height: auto; min-height: 100%;}
 	height: 150px;
 	clear:both;}
 
+
+
+
+
+
+/*Override font settings from jQuery*/
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {font-family: georgia,times; font-size:11px;}
+
+
+
 /* clear fix utility */
 .clearfix:after {
 	content: ".";

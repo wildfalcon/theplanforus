@@ -9,7 +9,7 @@ class EventsController < ApplicationController
     @event.plan_id = params[:plan_id]
     if @event.save
       flash[:notice] = 'Event was successfully created.'
-      redirect_to(plan_events_url) 
+      redirect_to(:back) 
     else
       render :action => "new" 
     end

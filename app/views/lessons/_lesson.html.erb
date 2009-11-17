@@ -1,7 +1,10 @@
-<tr>
-  <td><%=h lesson.teacher %></td>
-  <td><%=h lesson.date.strftime("%a %e %b") %></td>
-  <td><%=h lesson.start.strftime("%H:%M") %></td>
-  <td><%=h lesson.end.strftime("%H:%M") %></td>
-  <td><%= link_to 'Destroy', plan_lesson_path(lesson.plan, lesson), :confirm => 'Are you sure?', :method => :delete %></td>
-</tr>
+<div class="lesson">
+  <div class="clearfix">
+		<h2><%=h lesson.teacher %></h2>
+  	<span class="date"><%=h lesson.date.strftime("%A %d %B  %Y") %>
+	  (<%= lesson.start.strftime("%H:%M") %> - <%= lesson.end.strftime("%H:%M") %>)</span>
+	</div>
+  <span class="commands"><%= link_to 'Destroy', plan_lesson_path(lesson.plan, lesson), :confirm => 'Are you sure?', :method => :delete %></span>
+</div>
+
+
