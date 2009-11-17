@@ -5,6 +5,8 @@ ActionController::Routing::Routes.draw do |map|
   map.signup 'signup', :controller => "home", :action => "signup"
   map.thank_you 'thank_you', :controller => "home", :action => "thank_you"
 
+  map.resources :password_resets
+
   map.resources :users  
   map.resources :leads
   

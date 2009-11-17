@@ -1,5 +1,5 @@
 class PlansController < ApplicationController
-  before_filter :login_required
+  before_filter :require_user
 
 
   def index
