@@ -1,0 +1,14 @@
+$('#flash').html('<%= escape_javascript(flash.delete(:notice)) %>');  
+$('#flash').show("blind", [], 1000);
+setTimeout(function(){$('#flash').hide("blind", [], 1000);}, 5000);
+
+$('#events').replaceWith("<%= escape_javascript(render :partial => 'events', :locals => {:events => @events, :plan => enclosing_resource}) %>");
+
+<% day = @event.day %>
+$('#<%= day.html_id %>').replaceWith("<%= escape_javascript(render :partial=>"plans/day", :locals=>{:day=>day})%>")
+
+<% week = @event.week %>
+$('#<%= week.html_id %>').replaceWith("<%= escape_javascript(render :partial=>"plans/week", :locals=>{:week=>week})%>")
+
+
+

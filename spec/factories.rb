@@ -16,6 +16,7 @@ Factory.define :event do |e|
   e.primary true
   e.name "Blackpool"
   e.date Date.parse("2010-05-27")
+  e.plan {|plan| plan.association(:plan)}
 end
 
 Factory.define :lesson do |l|

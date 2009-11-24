@@ -50,5 +50,15 @@ describe Week do
     lesson_2 = Factory.create(:lesson, {:date => Date.parse("2010-01-01"), :plan => @week.plan})
     @week.lessons.size.should == 2
   end
+
+   it "should know how many events it has" do
+     Factory.create(:event, {:date => Date.parse("2010-01-01"), :plan => @week.plan})
+     Factory.create(:event, {:date => Date.parse("2010-01-01"), :plan => @week.plan})
+     @week.events.size.should == 2                                         
+   end
+  
+  it "should be able to work out its html id" do
+    @week.html_id.should=="week_#{@week.number}"
+  end
   
 end

@@ -39,5 +39,13 @@ describe Day do
      @day.lessons.size.should == 2                                         
    end                                                                     
 
+   it "should know how many events it has" do
+     lesson_1 = Factory.create(:event, {:date => Date.parse("2010-01-01"), :plan => @day.plan})
+     lesson_2 = Factory.create(:event, {:date => Date.parse("2010-01-01"), :plan => @day.plan})
+     @day.events.size.should == 2                                         
+   end
   
+  it "should be able to work out its html id" do
+    @day.html_id.should=="day_#{@day.date.strftime("%Y_%j")}"
+  end
 end

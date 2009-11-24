@@ -1,26 +1,34 @@
- <div class="inputs clearfix">
-  <div class="center">
-    <%= label_tag :primary %><br />
-    <%= check_box :event, :primary %>
-  </div>
+<% form_tag(plan_events_url(plan), :id => "new_event") do  %>
+	<div class="inputs clearfix">
+  	<div class="center">
+    	<%= label_tag :primary %><br />
+    	<%= check_box :event, :primary %>
+  	</div>
 
-  <div>
-    <%= label_tag :name %><br />
-    <%= text_field :event, :name %>
-  </div>
+  	<div>
+	    <%= label_tag :name %><br />
+	    <%= text_field :event, :name %>
+	  </div>
 
-  <div>
-    <%= label_tag :date %><br />
-		<%= text_field :event, :date_string, {:size=>"10",:class => "datepicker"} %> 
-  </div>
-	<div>
-    <%= submit_tag 'Submit' %>
-  </div>
-</div>
+	  <div>
+	    <%= label_tag :date %><br />
+			<%= text_field :event, :date_string, {:size=>"10",:class => "datepicker"} %> 
+	  </div>
+		<div>
+	    <%= submit_tag 'Submit' %>
+	  </div>
+	</div>
+<% end %>
   
-	<script type="text/javascript">
-	$(function() {
-		$(".datepicker").datepicker();
-	});
-	</script>
+<script type="text/javascript">
+$(function() {
+	$(".datepicker").datepicker();
+});
+</script>
 
+
+
+
+
+
+	

@@ -13,6 +13,18 @@ class Event < ActiveRecord::Base
     write_attribute(:date, Date.parse(date_string))
   end
   
+  def date_string
+    date.strftime("%Y/%m/%d")
+  end
+  
+  def day
+    Day.build(:date => self.date, :plan => self.plan)
+  end
+  
+  def week
+    Week.build(:date => self.date.beginning_of_week, :plan => self.plan)
+  end
+  
   def preceeding_lessons
     plan.lessons.before(self.date)
   end

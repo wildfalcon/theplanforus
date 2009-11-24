@@ -3,5 +3,5 @@
 		<h2><%=h event.name %></h2>
   	<span class="date"><%=h event.date.strftime("%A %d %B  %Y") %></span>
 	</div>
-  <span class="commands"><%= link_to 'Destroy', plan_event_path(event.plan, event), :confirm => 'Are you sure?', :method => :delete %></span>
+  <span class="commands"><%= link_to 'Destroy', plan_event_path(event.plan.id, event), :confirm => 'Are you sure?', :method => :delete %></span>
 </div>

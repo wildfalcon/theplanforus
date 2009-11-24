@@ -6,6 +6,9 @@
 #title_banner{float: left; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; margin: 20px 0 0 0; padding: 3px; color:black;}
 #title_banner span{font-size: xx-large;}
 
+/*flash message*/
+div#flash{border: 1px solid black; background: green; text-align: center;}
+
 /*Central column for centering*/
 .central{width: 800px; margin: 0 auto;}
 /*Primary and secondary event colourings*/

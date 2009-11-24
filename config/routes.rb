@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # Specific one of pages for this app
   map.root :controller => "home", :action => "index"
-  map.account :controller => "plans", :action => "index"
+  map.account 'account', :controller => "plans", :action => "index"
 
   #User management
   map.login 'login', :controller => 'user_sessions', :action => 'new'  

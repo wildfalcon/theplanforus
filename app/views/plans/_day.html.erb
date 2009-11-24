@@ -1,4 +1,4 @@
-<tr class="<%= day_class(day) -%>">
+<tr id="<%= day.html_id %>" class="<%= day_class(day) -%>">
 	<td><%= day.display_date -%></td>
 	<td><%- day.events.each do |event| -%>
 			<div class="<%= event_class(event) %>"><%= event.summary -%></div>

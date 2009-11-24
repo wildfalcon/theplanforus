@@ -35,14 +35,22 @@ class Day
   
   attr_accessor :date, :plan  
     
+
+  
   def events
-    @events ||= []
+    @events ||= begin
+      plan.events.select{|e| self.date==e.date}
+    end
   end
   
   def lessons 
     @lessons ||= begin
       plan.lessons.select {|l| self.date==l.date}
     end
+  end
+  
+  def html_id
+    "day_#{date.strftime("%Y_%j")}"
   end
   
   def has_lesson?

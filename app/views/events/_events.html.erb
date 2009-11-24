@@ -1,9 +1,8 @@
 <div id="events">
 	<div class="event new_event">
 		<div class="clearfix"><h2>Add new event</h2></div>
-	<% form_tag(plan_events_url(plan)) do  %>
-	 <%= render :partial => "events/form" %>
-	<% end %>
+
+	 <%= render :partial => "events/form", :locals => {:plan => plan}%>
 	</div>
 	
 	<%= render :partial => events %>

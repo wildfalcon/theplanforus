@@ -24,8 +24,14 @@ class Week
     start_date.strftime('%W')
   end
 
+  def html_id
+    "week_#{number}"
+  end
+  
   def events
-    @events ||= []
+    @events ||= begin
+      plan.events.select{|e| self.contains?(e.date)}
+    end
   end
   
   def lessons 
