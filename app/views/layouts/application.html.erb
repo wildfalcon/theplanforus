@@ -10,7 +10,7 @@
 		
 		<div id="main" class=" clearfix">
 			<div class="central">
-				<div id="flash"><%= flash[:notice] %></div>
+				<div id="flash" <%= "class='hidden'" unless flash[:notice] %>><%= flash[:notice] %></div>
 				<%= yield %>		
 			</div>
 		</div>
