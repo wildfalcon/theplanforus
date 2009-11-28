@@ -33,3 +33,7 @@ Factory.define :user do |u|
   u.password_confirmation { |usr| usr.password }  
   u.sequence(:email) {|n| "foo#{n}@example.com"}
 end
+
+Factory.define(:subscription_level) do |s|
+  s.name  "Level 1"
+end

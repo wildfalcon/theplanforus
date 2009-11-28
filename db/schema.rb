@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091117112137) do
+ActiveRecord::Schema.define(:version => 20091128162733) do
 
   create_table "events", :force => true do |t|
     t.string   "kind"
@@ -45,14 +45,20 @@ ActiveRecord::Schema.define(:version => 20091117112137) do
     t.integer  "user_id"
   end
 
+  create_table "subscription_levels", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
-    t.string   "username",           :default => "", :null => false
-    t.string   "email",              :default => "", :null => false
+    t.string   "username",              :default => "", :null => false
+    t.string   "email",                 :default => "", :null => false
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
-    t.integer  "login_count",        :default => 0,  :null => false
-    t.integer  "failed_login_count", :default => 0,  :null => false
+    t.integer  "login_count",           :default => 0,  :null => false
+    t.integer  "failed_login_count",    :default => 0,  :null => false
     t.datetime "last_request_at"
     t.datetime "current_login_at"
     t.datetime "last_login_at"
@@ -60,7 +66,8 @@ ActiveRecord::Schema.define(:version => 20091117112137) do
     t.string   "last_login_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "perishable_token",   :default => "", :null => false
+    t.string   "perishable_token",      :default => "", :null => false
+    t.integer  "subscription_level_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"
