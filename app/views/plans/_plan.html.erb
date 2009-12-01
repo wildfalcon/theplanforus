@@ -1,22 +1,24 @@
 
 <div id="plan_<%= plan.id %>" class="plan ui-corner-all clearfix">
-	<h2><%= link_to plan.name, plan_path(plan) %></h2>
-	
-	<div class="clearfix">		
-		<div class="plan_summary">
-			<div><span class="counter"><%= plan.events.upcoming.size %></span> Events planned</div>
-			<div><span class="counter"><%= plan.lessons.upcoming.size %></span> Lessons Booked</div>
+	<div class="clearfix">	
+		<div class="plan_title">
+				<h2><%= link_to plan.name, plan_path(plan) %></h2>
 		</div>
-	
-	
-		<%- if plan.events.upcoming.primary.size>0 -%>
-			<div id="next_event">
-				<%= render :partial => "events/event_detail", :locals => {:event => plan.events.upcoming.primary.first} %>
-			</div>
-		<%- end -%>
+		<div class="plan_controls">
+			<%= link_to 'Destroy', plan, :confirm => 'Are you sure?', :method => :delete %>
+		</div>
 	</div>
+	<div class="plan_summary">
+			<span class="counter"><%= plan.events.upcoming.size %></span> Events planned
+			<span class="counter"><%= plan.lessons.upcoming.size %></span> Lessons Booked
+	</div>
+
+	<%- if plan.events.upcoming.primary.size>0 -%>
+			<%= render :partial => "events/event_detail", :locals => {:event => plan.events.upcoming.primary.first} %>
+	<%- end -%>
+
 	
-	<%= link_to 'Destroy', plan, :confirm => 'Are you sure?', :method => :delete %>
+
 </div>
 
 
