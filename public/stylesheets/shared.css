@@ -18,9 +18,17 @@ div#flash{border: 1px solid black; background: green; text-align: center;}
 
 .hidden{display:none;}
 
+/*Login form (also used for forgotten password)*/
+div#login_form{border: 20px solid #654b24; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat ; width:400px; margin: 0 auto; padding:10px;}
+div#login_form form{width:380px; margin: 0 auto; padding:10px;}
+div#login_form form h1{text-align: left;}
+div#login_form form h1 a{font-size:20px;}
+div#login_form form div{margin-bottom: 10px;}
+div#login_form form input[type="text"]{width:100%;}
+div#login_form form input[type="password"]{width:100%;}
+
 /*Plan div*/
 div.plan{border: 2px solid black; padding:5px;}
-
 div.plan_summary{border: 1px solid black; width: 340px; padding: 10px; height: 145px; float:left; margin:10px;}
 
 /*weekly div */
