@@ -1,4 +1,4 @@
-<div id="header" class="ui-corner-all">
+<div id="header">
 	<div class="central">
 		<a href="<%= root_path %>">
 		<div id="title_banner" class="ui-corner-all">
@@ -7,6 +7,7 @@
 		</a>
 		<div id="user_nav" class="ui-corner-all">  
 		  <% if current_user %>  Hello <%= current_user.username %>, 
+				<%= link_to "My Plans", plans_path %> |
 		    <%= link_to "Edit profile", edit_user_path(:current) %> |
 		    <%= link_to "Logout", logout_path %>  
 		  <% else %>  
@@ -15,4 +16,8 @@
 		  <% end %>  
 		</div>
 	</div>
+
+</div>
+<div id="header_bottom_border">
+	
 </div>

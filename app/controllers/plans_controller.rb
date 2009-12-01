@@ -1,7 +1,6 @@
 class PlansController < ApplicationController
   before_filter :require_user
 
-
   def index
     @plans = current_user.plans
   end

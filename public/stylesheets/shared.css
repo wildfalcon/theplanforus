@@ -1,6 +1,6 @@
 /*Header*/
-#header {color: #FFFFFF; background: #654b24 url(images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat; margin-bottom: 20px;}
-#header {height: 100px;}
+#header {color: #FFFFFF; background: #654b24 url(images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat; height: 70px;}
+#header_bottom_border{background: #654b24; height:8px; margin-bottom:20px;}
 #user_nav {float: right; font-size: 0.9em; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; margin: 20px 0 0 0; padding: 3px; color:black;}
 #user_nav a{color:black;}
 #title_banner{float: left; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; margin: 20px 0 0 0; padding: 3px; color:black;}
@@ -11,11 +11,17 @@ div#flash{border: 1px solid black; background: green; text-align: center;}
 
 /*Central column for centering*/
 .central{width: 800px; margin: 0 auto;}
+
 /*Primary and secondary event colourings*/
 .secondary{border: 1px solid #b2a266; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; }
 .primary{border: 1px solid #681818; background: #b83400 url(images/ui-bg_fine-grain_68_b83400_60x60.png) 50% 50% repeat; color: #ffffff; }
 
 .hidden{display:none;}
+
+/*Plan div*/
+div.plan{border: 2px solid black; padding:5px;}
+
+div.plan_summary{border: 1px solid black; width: 340px; padding: 10px; height: 145px; float:left; margin:10px;}
 
 /*weekly div */
 div#weekly table {border-collapse: collapse;} /*odd but works in IE as well*/
@@ -29,7 +35,7 @@ div#weekly div#events_list{float:left; width: 380px;}
 div#weekly div#next_event{float:left; width: 360px;}
 
 /*Event detail box*/
-.event_detail{padding:10px;}
+.event_detail{padding:10px; width: 340px; height: 145px; float: left; margin: 10px;}
 .event_detail h2{margin:0;}
 .event_detail div{margin-bottom:4px;}
 .counter{border: 1px solid #b2a266; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; }
@@ -63,4 +69,3 @@ div#daily div#next_event{float:left; width: 400px;}
 #lessons form div.inputs div {float:left; margin-left: 10px;}
 
 
-#footer{background:black;}

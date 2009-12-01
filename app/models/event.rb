@@ -3,6 +3,7 @@ class Event < ActiveRecord::Base
   
   default_scope :order  => "date"
   named_scope :primary, :conditions => {:primary => true} 
+  named_scope :upcoming, :conditions => ['date > ?', Time.now]
   named_scope :before, lambda { |date| { :conditions => ['date < ?', date] }}
   
   def summary

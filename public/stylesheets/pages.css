@@ -23,9 +23,13 @@ html.home body.signup div{text-align: center;}
 /*daily view on plans controller*/
 html.plans body.daily .month{margin-top:2px;}
 
-/*html.user_sessions div#login_form{margin:0px auto; width: 400px;}*/
-html.user_sessions  body {text-align: center; }
-html.user_sessions  body form div{margin-top:5px; }
+html.user_sessions div#login_form{border: 20px solid #654b24; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat ; width:400px; margin: 0 auto; padding:10px;}
+html.user_sessions form{width:380px; margin: 0 auto; padding:10px;}
+html.user_sessions form h1{text-align: left;}
+html.user_sessions form h1 a{font-size:20px;}
+html.user_sessions form div{margin-bottom: 10px;}
+html.user_sessions form input{width:100%;}
+html.user_sessions form input[type="submit"]{width:15%;}
 
 html.users  form div .label {text-align: left;}
 html.users  form div input {margin-bottom: 5px;}

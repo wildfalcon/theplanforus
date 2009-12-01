@@ -6,11 +6,14 @@ h2 {font-size:20px; text-align: left; font-weight: normal; margin: 8px 0;}
 html, body, #wrap {height: 100%;}
 body > #wrap {height: auto; min-height: 100%;}
 
-#main {padding-bottom: 150px; min-height: 100%;}  /* must be same height as the footer */
+#main {padding-bottom: 50px; min-height: 100%;}  /* must be same height as the footer */
 
 #footer {position: relative;
-	margin-top: -150px; /* negative value of footer height */
-	height: 150px;
+	margin-top: -50px; /* negative value of footer height */
+	background: #654b24 url(images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat;
+	border-top: 8px solid #654b24;
+
+	height: 42px;
 	clear:both;}
 
 
