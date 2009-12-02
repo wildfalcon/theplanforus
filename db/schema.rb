@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091128162733) do
+ActiveRecord::Schema.define(:version => 20091202213843) do
 
   create_table "events", :force => true do |t|
     t.string   "kind"
@@ -68,6 +68,9 @@ ActiveRecord::Schema.define(:version => 20091128162733) do
     t.datetime "updated_at"
     t.string   "perishable_token",      :default => "", :null => false
     t.integer  "subscription_level_id"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "confirmation_token"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"
