@@ -21,17 +21,7 @@ config.action_view.cache_template_loading            = true
 # Enable serving of images, stylesheets, and javascripts from an asset server
 # config.action_controller.asset_host = "http://assets.example.com"
 
-config.action_mailer.raise_delivery_errors = true
-config.action_mailer.delivery_method = :smtp
-config.action_mailer.smtp_settings = {
-  :enable_starttls_auto => true,
-  :address => 'smtp.gmail.com',
-  :port => 587,
-  :authentication => :plain,
-  :domain => 'myapp.com',
-  :user_name => 'donotreply@theplanfor.us',
-  :password => '2A8262'
-}
+
 
 # Enable threaded mode
 # config.threadsafe!

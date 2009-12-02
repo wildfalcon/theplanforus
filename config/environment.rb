@@ -22,7 +22,6 @@ Rails::Initializer.run do |config|
   config.gem "rio"
   config.gem "icalendar"
   config.gem "authlogic"
-  
   config.gem "factory_girl", :source => "https://gemcutter.org"
   
 
