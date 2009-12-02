@@ -8,6 +8,20 @@ class User < ActiveRecord::Base
     reset_perishable_token!  
     Notifier.deliver_password_reset_instructions(self)  
   end
+  
+  def deliver_email_confirmation_instructions!
+    self.confirmation_token=self.perishable_token
+    reset_perishable_token!
+    self.confirmed_at = nil
+    self.confirmation_sent_at = Time.now.utc
+    self.save
+    Notifier.deliver_email_confirmation_instructions(self)
+  end
+
+  def confirm!
+    self.confirmed_at=Time.now.utc
+    self.confirmation_token=nil
+  end
 
   def subscription_level
     id = read_attribute(:subscription_level_id)
@@ -17,4 +31,5 @@ class User < ActiveRecord::Base
       level = SubscriptionLevel.free
     end
   end
+  
 end

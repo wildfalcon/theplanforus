@@ -20,8 +20,8 @@ class PasswordResetsController < ApplicationController
       render :action => :edit  
     end  
   end  
-
-  private  
+  
+  private
   def load_user_using_perishable_token  
     @user = User.find_using_perishable_token(params[:id])  
     unless @user  
@@ -30,8 +30,7 @@ class PasswordResetsController < ApplicationController
       "from your email into your browser or restarting the " +  
       "reset password process."  
       redirect_to root_url  
-    end  
+    end
+    @user
   end
-
-
 end

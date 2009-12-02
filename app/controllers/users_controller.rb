@@ -6,8 +6,10 @@ class UsersController < ApplicationController
   def create  
     @user = User.new(params[:user])  
     if @user.save  
-      flash[:notice] = "Registration successful."  
-      redirect_to root_url  
+      current_user.deliver_email_confirmation_instructions!
+      flash[:notice] = "Registration successful. An email with instructions to confirm your email address " +
+      "has been sent to you. Please follow the instructions to confirm your email address"
+      redirect_to root_url
     else  
       render :action => 'new'  
     end  
