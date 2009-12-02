@@ -25,7 +25,3 @@ html.plans body.daily .month{margin-top:2px;}
 
 
 
-html.users  form div .label {text-align: left;}
-html.users  form div input {margin-bottom: 5px;}
-html.users  form div#user_details {float:left; margin: 10px; padding:10px; border: 1px solid black;}
-html.users  form div#plan_details {float:left;margin: 10px; padding:10px; border: 1px solid black;}
