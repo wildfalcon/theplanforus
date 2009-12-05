@@ -10,7 +10,7 @@ class Notifier < ActionMailer::Base
     end  
     
     def email_confirmation_instructions(user)
-      subject     "Password Reset Instructions"
+      subject     "Confirm Email Instructions"
       from        "donotreply@theplanfor.us"
       recipients   user.email
       sent_on      Time.now
