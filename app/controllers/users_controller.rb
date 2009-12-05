@@ -18,7 +18,13 @@ class UsersController < ApplicationController
   def edit  
     @user = current_user  
   end  
-    
+
+  def delete
+    current_user.destroy
+    flash[:notice] = "Your account as been successfully deleted"
+    redirect_to root_url
+  end  
+
   def update  
     @user = current_user  
     if @user.update_attributes(params[:user])  

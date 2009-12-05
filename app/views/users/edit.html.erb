@@ -1,2 +1,32 @@
-<%# title ("Edit User") %>  
-<%= render @user %>
+
+
+<div id="login_form">
+	<div class="controls clearfix">
+		<%= button_to "Delete Account", { :action => "delete", :id => @user.id },
+		            :confirm => "Are you sure? This will cancel your "+
+		                        "ThePlanFor.us account. All of your plans and data "+
+		                        "will be lost", :method => :delete %>
+	</div>
+
+<% form_for @user, :html => {:class => "main_form"} do |form| %>  
+<h1>Edit Profile</h1>
+<a>
+<%= form.error_messages %>  
+  <div class="clearfix">
+		<div id="user_details">
+		  <div>  
+		     <div class="label"><%= form.label :password, "Password" %>  </div>
+		    <%= form.password_field :password %>  
+		  </div>  
+		  <div>  
+		     <div class="label"><%= form.label :password_confirmation, "Password confirmation" %>  </div>
+		    <%= form.password_field :password_confirmation %>  
+		  </div>  
+	  </div>
+	</div>
+  <div>  
+    <%= form.submit "Sign me up" %>  
+  </div>  
+
+<% end %>
+</div>
