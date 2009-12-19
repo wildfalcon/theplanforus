@@ -36,4 +36,5 @@ end
 
 Factory.define(:subscription_level) do |s|
   s.name  "Level 1"
+  s.number_of_plans 1
 end

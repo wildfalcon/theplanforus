@@ -30,12 +30,6 @@ div#login_form form.main_form div{margin-bottom: 10px;}
 div#login_form form.main_form input[type="text"]{width:100%;}
 div#login_form form.main_form input[type="password"]{width:100%;}
 
-/*Plan div*/
-div.plan{border:  3px solid #654b24; padding:5px; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; width:400px; margin: 0 auto;}
-div.plan div.plan_title{float:left; margin-right:20px;}
-div.plan div.plan_controls{float:right;}
-div.plan div.plan_summary{width: 340px; margin: 10px auto 10px auto;}
-div.plan div.event_detail{margin: 10px auto 10px auto; float: none;}
 
 /*weekly div */
 div#weekly table {border-collapse: collapse;} /*odd but works in IE as well*/

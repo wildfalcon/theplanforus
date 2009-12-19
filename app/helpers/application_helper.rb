@@ -7,5 +7,8 @@ module ApplicationHelper
     return class_name
   end
 
+  def pluralize(number, singular)
+    number==1 ? singular : singular.pluralize
+  end
 
 end

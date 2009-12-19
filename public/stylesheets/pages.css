@@ -23,5 +23,12 @@ html.home body.signup div{text-align: center;}
 /*daily view on plans controller*/
 html.plans body.daily .month{margin-top:2px;}
 
+html.plans body.index #plan_controls{border: 3px solid black; margin-bottom: 10px; padding:5px;}
 
+/*Plan div*/
+html.plans body.index div.plan{border:  3px solid #654b24; padding:5px; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; width:400px; margin: 0 auto;}
+html.plans body.index div.plan div.plan_title{float:left; margin-right:20px;}
+html.plans body.index div.plan div.plan_controls{float:right;}
+html.plans body.index div.plan div.plan_summary{width: 340px; margin: 10px auto 10px auto;}
+html.plans body.index div.plan div.event_detail{margin: 10px auto 10px auto; float: none;}
 
