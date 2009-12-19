@@ -1,5 +1,6 @@
 Factory.define :plan do |p|
   p.sequence(:name) {|n| "Plan_#{n}"}
+  p.user {|user| user.association(:user)}
 end
 
 Factory.define :week do |w|
@@ -32,9 +33,10 @@ Factory.define :user do |u|
   u.password "foobar"  
   u.password_confirmation { |usr| usr.password }  
   u.sequence(:email) {|n| "foo#{n}@example.com"}
+  u.subscription_level {|user| user.association(:subscription_level)}
 end
 
 Factory.define(:subscription_level) do |s|
   s.name  "Level 1"
-  s.number_of_plans 1
+  s.allowed_plans 1
 end

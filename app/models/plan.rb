@@ -3,6 +3,13 @@ class Plan < ActiveRecord::Base
   has_many :events
   has_many :lessons
 
+  validate_on_create :must_not_exceed_number_of_plans
+  
+  def must_not_exceed_number_of_plans
+    errors.add("Plan", "Exceeds number of allowed plans") if user.plans.count > user.allowed_plans-1
+  end
+
+
   def days
     @days ||= begin
       today = Time.now.to_date

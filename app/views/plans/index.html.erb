@@ -1,5 +1,5 @@
 <div id="plan_controls" class="ui-corner-all">
-	<% allowed_plans = current_user.subscription_level.number_of_plans  %>
+	<% allowed_plans = current_user.allowed_plans  %>
 	You currently have <%= @plans.count %> out of <%= allowed_plans %> 
 	<%= pluralize(allowed_plans, "plan") %>.
 	<%- if @plans.count < allowed_plans -%>

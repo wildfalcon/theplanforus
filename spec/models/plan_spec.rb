@@ -4,7 +4,19 @@ describe Plan do
   before(:each) do
     @plan = Factory.create(:plan)
   end
-
+  
+  describe "validations on create" do
+    before(:each) do
+      @plan = Factory.build(:plan)
+    end
+    
+    it "should not be valid on create if its a new record, and the user already has full plans" do
+      @plan.user.stub!(:plans).and_return [Factory.build(:plan)]
+      @plan.user.stub!(:allowed_plans).and_return(1)
+      @plan.should_not be_valid
+    end
+  end
+  
   it "should know how many upcoming events there are" do
     @plan.events.create(:date => (Time.now+1.day))
     @plan.events.create(:date => (Time.now-1.day))
