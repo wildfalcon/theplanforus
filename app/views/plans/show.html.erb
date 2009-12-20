@@ -5,8 +5,8 @@
 		<li><a href="#events">Events</a></li>
 		<li><a href="#lessons">Lessons</a></li>
 	</ul>
-	<%= render :partial => "daily",  :locals => {:days => @plan.days, :detailed_event => @plan.events.primary.first} %>
-	<%= render :partial => "weekly", :locals => {:weeks => @plan.weeks, :detailed_event => @plan.events.primary.first} %>
+	<%= render :partial => "daily",  :locals => {:days => @plan.days, :detailed_event => @plan.events.upcoming.primary.first} %>
+	<%= render :partial => "weekly", :locals => {:weeks => @plan.weeks, :detailed_event => @plan.events.upcoming.primary.first} %>
 	<%= render :partial => 'events/events',   :locals => {:events => @plan.events,   :plan => @plan} %>
 	<%= render :partial => 'lessons/lessons', :locals => {:lessons => @plan.lessons, :plan => @plan} %>
 </div>
