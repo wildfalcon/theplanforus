@@ -3,7 +3,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe User do
   describe "when created" do
     before(:each) do
-      @user = Factory(:user)
+      @user = Factory(:user, :subscription_level=>nil)
       SubscriptionLevel.stub!(:free).and_return(Factory.create(:subscription_level, :name=>"Free"))
     end
     

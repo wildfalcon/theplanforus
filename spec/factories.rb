@@ -39,4 +39,5 @@ end
 Factory.define(:subscription_level) do |s|
   s.name  "Level 1"
   s.allowed_plans 1
+  s.timeline_limit 30
 end

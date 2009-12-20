@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 
   has_many :plans
   belongs_to :subscription_level
-  delegate :allowed_plans, :to => :subscription_level
+  delegate :allowed_plans, :timeline_limit, :to => :subscription_level
 
   def deliver_password_reset_instructions!  
     reset_perishable_token!  

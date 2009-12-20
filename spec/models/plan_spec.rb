@@ -38,8 +38,9 @@ describe Plan do
       @plan.days.first.class.should == Day
     end
 
-    it "should return 365 days" do
-      @plan.days.size.should == 365
+    it "should return the number of days in the subscription level" do
+      @plan.user.stub!(:timeline_limit).and_return(30)
+      @plan.days.size.should == 30
     end
   end
 
@@ -52,8 +53,9 @@ describe Plan do
       @plan.weeks.first.class.should == Week
     end
 
-    it "should return 52 weeks" do
-      @plan.weeks.size.should == 52      
+    it "should return as many weeks as necessary to cover the number of days in the subscription level" do
+      @plan.user.stub!(:timeline_limit).and_return(30)
+      @plan.weeks.last.start_date.should == (Time.now+30.days).beginning_of_week.to_date
     end
 
     it "should start this week" do
