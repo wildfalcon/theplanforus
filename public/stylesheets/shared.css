@@ -6,6 +6,10 @@
 #title_banner{float: left; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; margin: 20px 0 0 0; padding: 3px; color:black;}
 #title_banner span{font-size: xx-large;}
 
+/*Footer*/
+#footer div div{background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; padding: 3px; color:black; width:100%; margin: 5px 0 0 0;}
+#footer div div a{color:black;}
+
 /*flash message*/
 div#flash{border: 1px solid black; background: green; text-align: center;}
 

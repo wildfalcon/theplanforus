@@ -12,9 +12,9 @@ body > #wrap {height: auto; min-height: 100%;}
 	margin-top: -50px; /* negative value of footer height */
 	background: #654b24 url(images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat;
 	border-top: 8px solid #654b24;
-
 	height: 42px;
-	clear:both;}
+	clear:both;
+}
 
 
 
