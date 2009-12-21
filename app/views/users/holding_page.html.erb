@@ -1,0 +1,22 @@
+<div class="dominant_form">
+	<h1>We are not ready yet</h1>
+
+<p>We are still adding the finishing touches to our service, and are not yet willing
+	to accept money for this service. However our <%= link_to "free account", new_user_path(:plan => "free")%> is now avaialble</p>
+	<br/>
+<p>If you would prefer to be notified full accounts are ready, please enter your e-mail
+	address below and we will be in touch soon</p>
+	<br/>
+	<% form_tag(leads_url, :html => {:class => "main_form"}) do  %>
+	 <div class="inputs clearfix">
+	  <div>
+	    <%= label_tag :email %><br />
+	    <%= text_field :lead, :email %>
+	  </div>
+
+	</div>
+	  <div>
+	    <%= submit_tag 'Submit' %>
+	  </div>
+	<% end %>
+</div>
