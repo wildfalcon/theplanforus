@@ -41,3 +41,7 @@ Factory.define(:subscription_level) do |s|
   s.allowed_plans 1
   s.timeline_limit 30
 end
+
+Factory.define(:lead) do |l|
+  l.sequence(:email) {|n| "lead_#{n}@example.com"}
+end
