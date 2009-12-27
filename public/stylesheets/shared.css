@@ -1,10 +1,11 @@
 /*Header*/
-#header {color: #FFFFFF; background: #654b24 url(images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat; height: 70px;}
+#header {color: #FFFFFF; background: #654b24 url(images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat; height: 90px;}
 #header_bottom_border{background: #654b24; height:8px; margin-bottom:20px;}
 #user_nav {float: right; font-size: 0.9em; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; margin: 20px 0 0 0; padding: 3px; color:black;}
 #user_nav a{color:black;}
 #title_banner{float: left; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; margin: 20px 0 0 0; padding: 3px; color:black;}
 #title_banner span{font-size: xx-large;}
+#header #main_nav{background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; margin: 10px auto 0px auto; padding: 0 10px;}
 
 /*Footer*/
 #footer div div{background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; padding: 3px; color:black; width:100%; margin: 5px 0 0 0;}
