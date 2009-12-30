@@ -20,6 +20,10 @@ html.home body.prices div.feature_description h2{font-weight: bold;}
 
 html.home body.signup div{text-align: center;}
 
+
+html.tutorials body p{margin-bottom:1em;}
+html.tutorials body img{margin:10px auto; display:block; border: 1px solid black;}
+
 /*daily view on plans controller*/
 html.plans body.daily .month{margin-top:2px;}
 
