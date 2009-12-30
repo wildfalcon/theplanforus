@@ -1,4 +1,4 @@
-class Lesson < Preparation
+class Preparation < ActiveRecord::Base
   belongs_to :plan
   
   named_scope :upcoming, :conditions => ['date > ?', Time.now]

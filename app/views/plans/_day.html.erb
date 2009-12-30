@@ -4,7 +4,7 @@
 			<div class="<%= event_class(event) %>"><%= event.summary -%></div>
 		<%- end -%>
 		<%- day.lessons.each do |lesson| -%>
-				<div class="lesson"><%= lesson.teacher -%></div>
+				<div class="lesson"><%= lesson.description -%></div>
 			<%- end -%>
 	</td>
 </tr>

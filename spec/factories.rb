@@ -20,13 +20,22 @@ Factory.define :event do |e|
   e.plan {|plan| plan.association(:plan)}
 end
 
-Factory.define :lesson do |l|
-  l.date Date.parse("2010-05-27")
-  l.start Time.now
-  l.end   Time.now
-  l.teacher "Albert Einstien"
-  l.plan {|plan| plan.association(:plan)}
+Factory.define :preparation do |p|
+  p.date Date.parse("2010-05-27")
+  p.start Time.now
+  p.end   Time.now
+  p.description "Albert Einstien"
+  p.plan {|plan| plan.association(:plan)}
 end
+
+Factory.define :lesson do |p|
+  p.date Date.parse("2010-05-27")
+  p.start Time.now
+  p.end   Time.now
+  p.description "Albert Einstien"
+  p.plan {|plan| plan.association(:plan)}
+end
+
 
 Factory.define :user do |u|
   u.sequence(:username) { |n| "foo#{n}" } 
