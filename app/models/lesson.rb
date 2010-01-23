@@ -4,4 +4,8 @@ class Lesson < Preparation
   named_scope :upcoming, :conditions => ['date > ?', Time.now]
   named_scope :before, lambda { |date| { :conditions => ['date < ?', date] }}
   
+  def date_string=(date_string)
+    write_attribute(:date, Date.parse(date_string))
+  end
+  
 end
