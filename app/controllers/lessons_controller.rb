@@ -1,7 +1,9 @@
 class LessonsController < ApplicationController
   resources_controller_for :lessons
 
-  
+  def index
+    @lessons = enclosing_resource.lessons.upcoming
+  end
   
   def create
      @resource = @lesson = Lesson.new(params[:lesson])
