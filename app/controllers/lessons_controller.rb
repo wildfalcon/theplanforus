@@ -14,7 +14,10 @@ class LessonsController < ApplicationController
      else
        render :action => "new" 
      end
-
+   end
+   
+   def list
+     @lessons = enclosing_resource.lessons.upcoming
    end
 
 end

@@ -36,3 +36,5 @@ html.plans body.index div.plan div.plan_controls{float:right;}
 html.plans body.index div.plan div.plan_summary{width: 340px; margin: 10px auto 10px auto;}
 html.plans body.index div.plan div.event_detail{margin: 10px auto 10px auto; float: none;}
 
+html.lessons body.list ul.months li {list-style: none;}
+html.lessons body.list ul.months>li {list-style: none; font-weight: bold; margin-top: 1em;}

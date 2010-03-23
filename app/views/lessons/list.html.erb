@@ -1,0 +1,10 @@
+<ul class="months">
+<% @lessons.group_by{|l| l.date.strftime("%B")}.each do |month, lessons| %>
+	<li><%= month %></li>
+	<ul class="lessons">
+		<% lessons.each do |lesson| %>
+			<li><%= lesson.date.strftime("%A %e") %> <%= lesson.description %></li>
+		<% end  %>
+	</ul>
+<% end %>
+</ul>

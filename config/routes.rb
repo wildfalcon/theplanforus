@@ -22,7 +22,7 @@ ActionController::Routing::Routes.draw do |map|
   #The app itself
   map.resources :plans, :member => { :daily => :get, :weekly => :get } do |plan|
     plan.resources :events
-    plan.resources :lessons
+    plan.resources :lessons, :collection => {:list => :get}
   end
 
   # Install the default routes as the lowest priority.
