@@ -3,8 +3,11 @@
 	<li><%= month %></li>
 	<ul class="lessons">
 		<% lessons.each do |lesson| %>
-			<li><%= lesson.date.strftime("%A %e @ %H:%M") %><%= lesson.description %></li>
+			<li><%= lesson.date.strftime("%A %e @") %><%= lesson.start.strftime("%H:%M") %> <%= lesson.description %></li>
 		<% end  %>
 	</ul>
 <% end %>
 </ul>
+
+
+ 
