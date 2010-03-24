@@ -3,7 +3,7 @@ development:
   database: theplanforus_development
   username: root
 
-test:
+test: &TEST
   adapter: mysql
   database: theplanforus_test
   username: root
@@ -12,3 +12,6 @@ production:
   adapter: mysql
   database: theplanforus_production
   username: root
+
+cucumber:
+  <<: *TEST
