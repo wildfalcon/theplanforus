@@ -1,5 +1,5 @@
 class PlansController < ApplicationController
-  before_filter :require_user
+  before_filter :require_user, :except => :ical
 
   def index
     @plans = current_user.plans
@@ -22,11 +22,23 @@ class PlansController < ApplicationController
     @plan = current_user.plans.new
   end
 
-
   def edit
     @plan = current_user.plans.find(params[:id])
   end
 
+  def ical
+    cal = Icalendar::Calendar.new
+
+    Plan.find(params[:id]).lessons.all.each do |lesson|
+      event = Icalendar::Event.new
+      event.start = lesson.start
+      event.summary = lesson.description
+      cal.add_event(event)
+    end
+
+    @calendar = cal.to_ical
+    render :layout => false
+  end
 
   def create
     @plan = current_user.plans.new(params[:plan])
