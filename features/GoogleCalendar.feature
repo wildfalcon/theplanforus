@@ -4,6 +4,7 @@ Feature: Sync with Google Calendar
   I want my lessons and events be exported as a .ical file 
   (which google can subscribe to)
 
+@wip
 Scenario: Lessons are in file
   Given a user is logged in as "markEmark"
   And "markEmark" has a plan "mark's plan"
