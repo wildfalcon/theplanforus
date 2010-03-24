@@ -2,3 +2,5 @@ tmp
 log
 coverage
 .app_profile
+rerun.txt
+.DS_Store
