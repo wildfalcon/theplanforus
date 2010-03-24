@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="<%= controller.controller_name -%>">
 <%= render :partial => "layouts/html_header" %>
 <body class="<%= controller.action_name -%>">
+	<p style="color: green"><%= flash[:notice] %></p> 
 	<div id="wrap" class="ui-widget-content">
 		<%= render :partial => "layouts/header" %>	
 		
