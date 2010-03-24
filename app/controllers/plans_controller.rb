@@ -32,6 +32,7 @@ class PlansController < ApplicationController
     Plan.find(params[:id]).lessons.all.each do |lesson|
       event = Icalendar::Event.new
       event.start = lesson.start
+      event.end = lesson.end
       event.summary = lesson.description
       cal.add_event(event)
     end
