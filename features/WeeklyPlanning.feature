@@ -2,11 +2,13 @@ Feature: Weekly View
   In order See the long time plans
   As a user
   I want to see a list of weeks, showing competitions and lessons
-  
-Scenario: Viewing number of competitions in a week
+
+Background:
   Given a user is logged in as "markEmark"
   And "markEmark" has a plan "mark's plan"
   And There are 2 lessons in "mark's plan" with date 2009-09-09
+  
+Scenario: Viewing number of competitions in a week
   When I go to the plans page
   And follow "mark's plan"
   And follow "Weekly"
