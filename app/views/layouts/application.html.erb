@@ -11,8 +11,12 @@
 		
 		<div id="main" class=" clearfix">
 			<div class="central">
-				<div id="flash" <%= "class='hidden'" unless flash[:notice] %>><%= flash[:notice] %></div>
-				<%= yield %>		
+			  <% if flash[:notice] %>
+			    <div class="flash js_highlight"><%= flash[:notice] %></div>
+			  <% end %>
+				
+		<%= @sub_layout ? render(:partial => "layouts/#{@sub_layout}") : yield %>
+		
 			</div>
 		</div>
 	</div>

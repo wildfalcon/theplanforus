@@ -1,12 +1,18 @@
 class PlansController < ApplicationController
-  before_filter :require_user, :except => :ical
 
+  before_filter :require_user
+  before_filter :set_layout
+ 
   def index
+    @sub_layout = nil 
     @plans = current_user.plans
   end
 
   def weekly
-    @plan = current_user.plans.find(params[:id])
+    @plan  = current_user.plans.find(params[:id])
+    start_date = Date.parse(params[:start]) if params[:start]
+    end_date   = Date.parse(params[:end]) if params[:end]
+    @weeks = @plan.weeks(start_date, end_date)
   end
 
   def daily
@@ -16,7 +22,6 @@ class PlansController < ApplicationController
   def show
     @plan = current_user.plans.find(params[:id])
   end
-
 
   def new
     @plan = current_user.plans.new
@@ -68,5 +73,11 @@ class PlansController < ApplicationController
     @plan.destroy
     redirect_to(plans_url)
   end
+
+  protected
+  
+  def set_layout
+     @sub_layout = 'plans'
+   end
 
 end
