@@ -1,3 +1,10 @@
+<% form_tag(weekly_plan_path(@plan), :method => "get") do -%>
+	<%= label_tag "start", "Start Date" %>
+	<%= text_field_tag("start") %>
+	<%= label_tag "end", "End Date" %>
+	<%= text_field_tag("end") %>
+	<%= submit_tag("Display") %>
+<% end  %>
 <div id="weekly" class="clearfix">
 	<div id="events_list"
 		<table>

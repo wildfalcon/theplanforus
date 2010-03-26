@@ -16,7 +16,7 @@ class Plan < ActiveRecord::Base
       start_day = today
       # start_day = Date.parse("#{(today+1.year).year}-01-01")
       days = []
-      (0..user.timeline_limit-1).each do |d|
+      (0..365).each do |d|
         date = start_day+d.days
         days<<Day.build(:date => date, :plan => self)
       end
@@ -25,19 +25,25 @@ class Plan < ActiveRecord::Base
     end
   end
 
-  def weeks
-    @weeks ||= begin
+  def weeks(start_date = Time.now, end_date = Time.now+365.days)
+    #work with dates, then differences are in day not milliseconds
+    start_date ||= Time.now
+      end_date ||= Time.now+365.days
+
+    start_date = start_date.to_date
+      end_date = end_date.to_date
+          
+    start_of_first_week = start_date.beginning_of_week
+    start_of_last_week  = end_date.beginning_of_week
+    number_of_weeks = ((start_of_last_week - start_of_first_week)/(7))
+    @weeks = begin
       weeks = []
-      today = Time.now.beginning_of_week
-      start_of_last_week = (Time.now+user.timeline_limit.days).beginning_of_week
-      number_of_weeks = (start_of_last_week-today)/(24*60*60*7)
-      
       (0..number_of_weeks).each do |w|
-        date=today+w.weeks
-        weeks<<Week.build(:date => date.to_date, :plan => self)
+        date=start_of_first_week+w.weeks
+        weeks << Week.build(:date => date.to_date, :plan => self)
       end
-      
-      weeks.sort!{|a,b| a.start_date <=> b.start_date}
+      weeks
+      # weeks.sort!{|a,b| a.start_date <=> b.start_date}
     end
   end
 

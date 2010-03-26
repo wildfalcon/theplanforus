@@ -13,6 +13,9 @@ module NavigationHelpers
     when /the ical_url for "([^\"]*)"/
       plan = Plan.find_by_name($1)
       ical_plan_path(plan)
+    when /the plans page/
+      plans_path
+      
           
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
