@@ -6,8 +6,9 @@ Feature: Weekly View
 Background:
   Given a user is logged in as "markEmark"
   And "markEmark" has a plan "mark's plan"
-  And There are 2 lessons in "mark's plan" with date 2009-09-09
-  
+  When I create a lesson in "mark's plan" with "Mindy" on "2009-09-09" from "13:30" to "15:00" 
+  When I create a lesson in "mark's plan" with "Mork" on "2009-09-09" from "15:00" to "16:30" 
+
 Scenario: Viewing number of competitions in a week
   When I go to the plans page
   And follow "mark's plan"

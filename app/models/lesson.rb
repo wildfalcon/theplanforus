@@ -9,4 +9,8 @@ class Lesson < Preparation
     write_attribute(:date, Date.parse(date_string))
   end
   
+  def date_string
+    self.date ? self.date.strftime("%Y-%m-%d") : ""
+  end
+  
 end

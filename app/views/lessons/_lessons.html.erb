@@ -6,37 +6,31 @@
 
 
 
-	<% form_tag(plan_lessons_url(plan)) do  %>
+	<% form_for(Lesson.new, :url => plan_lessons_path(@plan)) do |f| %>
 	 <div class="inputs clearfix">
 	  <div>
-	    <%= label_tag :description %><br />
-	    <%= text_field :lesson, :description %>
+	    <%= f.label :description %><br />
+	    <%= f.text_field :description %>
 	  </div>
 
 	  <div>
-	    <%= label_tag :date %><br />
-	    <%= text_field :lesson, :date_string, {:size=>"10",:class => "datepicker"} %> 
+	    <%= f.label :date_string, "Date" %><br />
+	    <%= f.text_field :date_string, {:size=>"10",:class => "datepicker"} %> 
 	  </div>
 
 	  <div>
-	    <%= label_tag :start %><br />
-			<%= time_select :lesson, :start, {:minute_step => 15} %> 
+	    <%= f.label :start %><br />
+			<%= f.time_select :start, {:minute_step => 15} %> 
 	  </div>
 
 	  <div>
-	    <%= label_tag :end %><br />
-			<%= time_select :lesson, :end, {:minute_step => 15} %> 
+	    <%= f.label :end %><br />
+			<%= f.time_select :end, {:minute_step => 15} %> 
 	  </div>
 
 	</div>
 	  <div>
-	    <%= submit_tag 'Submit' %>
+	    <%= f.submit 'Book Lesson' %>
 	  </div>
-
-		<script type="text/javascript">
-		$(function() {
-			$(".datepicker").datepicker();
-		});
-		</script>
 	<% end %>
 </div>
