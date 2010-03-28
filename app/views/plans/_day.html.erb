@@ -1,11 +1,16 @@
 <tr id="<%= day.html_id %>" class="<%= day_class(day) -%>">
 	<td><%= day.display_date -%></td>
-	<td><%- day.events.each do |event| -%>
-			<div class="<%= event_class(event) %>"><%= event.summary -%></div>
-		<%- end -%>
-		<%- day.lessons.each do |lesson| -%>
+	<td>
+		<div class="events">
+			<%- day.events.each do |event| -%>
+				<div class="<%= event_class(event) %>"><%= event.summary -%></div>
+			<%- end -%>
+		</div>
+		<div class="lessons">
+			<%- day.lessons.each do |lesson| -%>
 				<div class="lesson"><%= lesson.description -%></div>
 			<%- end -%>
+		</div>
 	</td>
 </tr>
 

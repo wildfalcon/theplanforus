@@ -1,10 +1,5 @@
-<% form_tag(weekly_plan_path(@plan), :method => "get") do -%>
-	<%= label_tag "start", "Start Date" %>
-	<%= text_field_tag "start", "", :class => "datepicker" %>
-	<%= label_tag "end", "End Date" %>
-	<%= text_field_tag "end", "", :class => "datepicker" %>
-	<%= submit_tag("Display") %>
-<% end  %>
+<%= render :partial => "date_select_form", :locals => {:path => weekly_plan_path(@plan)} %>
+
 <div id="weekly" class="clearfix">
 	<div id="events_list"
 		<table>

@@ -1,0 +1,7 @@
+<% form_tag(path, :method => "get") do -%>
+	<%= label_tag "start", "Start Date" %>
+	<%= text_field_tag "start", "", :class => "datepicker" %>
+	<%= label_tag "end", "End Date" %>
+	<%= text_field_tag "end", "", :class => "datepicker" %>
+	<%= submit_tag("Display") %>
+<% end  %>

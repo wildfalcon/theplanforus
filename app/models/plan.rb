@@ -3,25 +3,22 @@ class Plan < ActiveRecord::Base
   has_many :events
   has_many :lessons
 
-  # validate_on_create :must_not_exceed_number_of_plans
-  #  
-  #  def must_not_exceed_number_of_plans
-  #    errors.add("Plan", "Exceeds number of allowed plans") if user.plans.count > user.allowed_plans-1
-  #  end
- 
-
-  def days
-    @days ||= begin
-      today = Time.now.to_date
-      start_day = today
-      # start_day = Date.parse("#{(today+1.year).year}-01-01")
-      days = []
-      (0..365).each do |d|
-        date = start_day+d.days
-        days<<Day.build(:date => date, :plan => self)
-      end
+  def days(start_date = Time.now, end_date = Time.now+365.days)
+    start_date ||= Time.now
+      end_date ||= Time.now+365.days
+      
+    start_date = start_date.to_date
+      end_date = end_date.to_date
+  
+    number_of_days = end_date - start_date
     
-      days.sort!{|a,b| a.date <=> b.date}
+    @days = begin
+      days = []
+      (0..number_of_days).each do |d|
+        date = start_date+d.days
+        days << Day.build(:date => date, :plan => self)
+      end
+      days
     end
   end
 
@@ -43,7 +40,6 @@ class Plan < ActiveRecord::Base
         weeks << Week.build(:date => date.to_date, :plan => self)
       end
       weeks
-      # weeks.sort!{|a,b| a.start_date <=> b.start_date}
     end
   end
 
