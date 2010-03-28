@@ -8,6 +8,7 @@
     <ul class="sub_nav">
       <li class="<%= selected_class(weekly_plan_path, plans_path) %>"><%= link_to 'Weekly', weekly_plan_path %></li>
       <li class="<%= selected_class(plan_lessons_path(@plan), plans_path) %>"><%= link_to 'Lessons', plan_lessons_path(@plan) %></li>
+      <li class="<%= selected_class(plan_events_path(@plan), plans_path) %>"><%= link_to 'Events', plan_events_path(@plan) %></li>
     </ul>
   </div>
 </div>

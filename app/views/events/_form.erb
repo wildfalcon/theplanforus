@@ -1,21 +1,17 @@
-<% form_tag(plan_events_url(plan), :id => "new_event") do  %>
+<% form_for(Event.new, :url => plan_events_url(plan), :id => "new_event") do   |f| %>
 	<div class="inputs clearfix">
-  	<div class="center">
-    	<%= label_tag :primary %><br />
-    	<%= check_box :event, :primary %>
-  	</div>
-
   	<div>
-	    <%= label_tag :name %><br />
-	    <%= text_field :event, :name %>
+	    <%= f.label :name %><br />
+	    <%= f.text_field :name %>
 	  </div>
 
 	  <div>
-	    <%= label_tag :date %><br />
-			<%= text_field :event, :date_string, {:size=>"10",:class => "datepicker"} %> 
+	    <%= f.label :date_string, "Date" %><br />
+			<%= f.text_field :date_string, {:size=>"10",:class => "datepicker"} %> 
 	  </div>
+	
 		<div>
-	    <%= submit_tag 'Submit' %>
+	    <%= f.submit 'Book Event	' %>
 	  </div>
 	</div>
 <% end %>

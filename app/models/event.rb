@@ -15,7 +15,7 @@ class Event < ActiveRecord::Base
   end
   
   def date_string
-    date.strftime("%Y/%m/%d")
+    self.date ? self.date.strftime("%Y/%m/%d") : ""
   end
   
   def day
