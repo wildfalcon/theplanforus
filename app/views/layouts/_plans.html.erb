@@ -1,8 +1,5 @@
-<div id="main_col">
-  <%= yield %>
-</div>
 
-<div id="second_col">
+<div id="nav_col">
   <div class="section">
     <h3>Plans</h3>
     <ul class="sub_nav">
@@ -12,4 +9,8 @@
       <li class="<%= selected_class(plan_events_path(@plan), plans_path) %>"><%= link_to 'Events', plan_events_path(@plan) %></li>
     </ul>
   </div>
+</div>
+
+<div id="main_col">
+  <%= yield %>
 </div>

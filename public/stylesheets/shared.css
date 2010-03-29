@@ -1,85 +1,69 @@
-/*Header*/
-#header {color: #FFFFFF; background: #654b24 url(images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat; height: 90px;}
-#header_bottom_border{background: #654b24; height:8px; margin-bottom:20px;}
-#user_nav {float: right; font-size: 0.9em; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; margin: 20px 0 0 0; padding: 3px; color:black;}
-#user_nav a{color:black;}
-#title_banner{float: left; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; margin: 20px 0 0 0; padding: 3px; color:black;}
-#title_banner span{font-size: xx-large;}
-#header #main_nav{background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; margin: 10px auto 0px auto; padding: 0 10px;}
+/* General Layout Styles */
+.central {width: 800px; margin: 0 auto; background-color: green;}
 
-/*Footer*/
-#footer div div{background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; padding: 3px; color:black; width:100%; margin: 5px 0 0 0;}
-#footer div div a{color:black;}
+/* Header footer etc styles */
+#header {background-color: #222; padding-bottom: 5px;}
+#header .central {background-color: #222;} /*This line can be removed later*/
+#header #title_banner{
+  display: block; 
+  float: left; 
+  background-color: #777;
+  padding: 0.3em;
+  margin-top: 0.4em;
+  -webkit-border-radius: 5px;
+}
+#header #title_banner a{display: block; color: white; text-decoration: none;}
+#header #account_nav{float:right; margin-top: 0.4em;}
+#header #account_nav ul{list-style-type: none;}
+#header #account_nav ul li {
+  display: block; 
+  float: left; 
+  background-color: #777;
+  padding: 0.3em 0.5em;
+  margin-left: 0.2em;
+  -webkit-border-radius: 5px;
+}
+#header #account_nav ul li a {color: white; text-decoration: none;}
 
-/*flash message*/
-div#flash{border: 1px solid black; background: green; text-align: center;}
+/* Main Body Styles */
+#main{padding-top: 1em;}
 
-/*Central column for centering*/
-.central{width: 800px; margin: 0 auto;}
+/* Main Col Styles */
+#main_col{border: 5px solid #9B8ECF ; float: left; width:690px;}
 
-/*Primary and secondary event colourings*/
-.secondary{border: 1px solid #b2a266; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; }
-.primary{border: 1px solid #681818; background: #b83400 url(images/ui-bg_fine-grain_68_b83400_60x60.png) 50% 50% repeat; color: #ffffff; }
+/* Side Nav Styles */
+#nav_col{width: 100px; float: left;}
+#nav_col ul{list-style-type: none;}
+#nav_col ul li{background-color: #222; padding: 0.3em;}
+#nav_col ul li a {display: block;color:white; text-decoration:none;}
+#nav_col ul li.selected{background-color: #9B8ECF;}
+#nav_col ul li.selected a{color: #222;}
 
-.hidden{display:none;}
+/* Date range (on Calendar view) styles */
+#date_range{background-color: #9B8ECF; padding: 0.5em;}
 
-/*Controls for the top of a div (eg user, plan etc)*/
-.controls form.button-to{float:right;}
-
-/*Dominant Form: Used whenever the page is exactly 1 form (login, signup, plan creation etc)*/
-div.dominant_form{border: 20px solid #654b24; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat ; width:400px; margin: 0 auto; padding:10px;}
-div.dominant_form div.form_description{margin-bottom: 10px; font-style:italic;}
-div.dominant_form form.main_form{width:380px; margin: 0 auto; padding:10px;}
-div.dominant_form form.main_form h1{text-align: left;}
-div.dominant_form form.main_form h1 a{font-size:20px;}
-div.dominant_form form.main_form div{margin-bottom: 10px;}
-div.dominant_form form.main_form input[type="text"]{width:100%;}
-div.dominant_form form.main_form input[type="password"]{width:100%;}
-
-
-/*weekly div */
-div#weekly table {border-collapse: collapse;} /*odd but works in IE as well*/
-div#weekly table tr td{border: 1px solid #ccc; text-align: center;}
-div#weekly table tr td.event_details {border: 0px;  position: relative;}
-div#weekly table tr.event td{border-bottom: 2px solid #140F06; position: relative;}
-div#weekly table tr.primary_event td{border-bottom: 2px solid #140F06; position: relative;}
-div#weekly table tr div.events{position: absolute}
-div#weekly table tr div.events span{padding: 0 4px 0 4px; font-size:large; }
-div#weekly div#events_list{float:left; width: 380px;}
-div#weekly div#next_event{float:left; width: 360px;}
-
-/*Event detail box*/
-.event_detail{padding:10px; width: 340px; height: 145px; float: left; margin: 10px;}
-.event_detail h2{margin:0;}
-.event_detail div{margin-bottom:4px;}
-.counter{border: 1px solid #b2a266; background: #f7f3de url(images/ui-bg_fine-grain_15_f7f3de_60x60.png) 50% 50% repeat; color: #3a3427; }
-.counter{font-size: x-large; border: 1px solid black; padding: 0 4px 0 4px;}
-
-/*daily div*/
-div#daily table {border-collapse: collapse;} /*odd but works in IE as well*/
-div#daily table tr td{border: 1px solid #ccc; text-align: center; padding: 0 4px 0 4px; color:black;}
-div#daily table tr.weekend{ background: #FFC;}
-div#daily table tr.lesson{ background: #0F0;}
-div#daily div#events_list{float:left; width: 400px;}
-div#daily div#next_event{float:left; width: 400px;}
-
-/*events div*/
-#events .event{height: 60px;}
-#events .new_event{border: 1px solid #b2a266; background: white; height: 80px;}
-#events .new_event INPUT[type='submit']{margin-top: 19px;}
-#events .new_event .center{text-align: center;}
-#events .event h2{float:left; margin: 4px;}
-#events .event .date{float:right; margin: 4px;}
-#events .event .commands{font-size: small; float:right; margin: 4px;}
-#events form div.inputs {margin-bottom: 10px;}
-#events form div.inputs div {float:left; margin-left: 10px;}
-
-/*lessons div*/
-#lessons .lesson {height: 60px; border: 1px solid #b2a266;}
-#lessons .lesson  h2{float:left; margin: 4px;}
-#lessons .lesson  .date{float:right; margin: 4px;}
-#lessons .lesson  .commands{font-size: small; float:right; margin: 4px;}
-#lessons form div.inputs {margin-bottom: 10px;}
-#lessons form div.inputs div {float:left; margin-left: 10px;}
-
+/* Datepicker (JQuery Datepicker)*/
+#ui-datepicker-div{
+  border: 1px solid #9B8ECF; 
+  background-color: white;
+  width: 200px;
+}
+#ui-datepicker-div .ui-datepicker-header{background-color:#9B8ECF; padding: 10px;}
+#ui-datepicker-div .ui-datepicker-header .ui-datepicker-next{
+  background-image: url("/stylesheets/images/next-arrow.png");
+  background-repeat:no-repeat;
+  float: right;
+}
+#ui-datepicker-div .ui-datepicker-header .ui-datepicker-next span{visibility:hidden;}
+#ui-datepicker-div .ui-datepicker-header .ui-datepicker-prev{
+  background-image: url("/stylesheets/images/prev-arrow.png");
+  background-repeat:no-repeat;
+  float: left;
+}
+#ui-datepicker-div .ui-datepicker-header .ui-datepicker-prev span{visibility:hidden;}
+table.ui-datepicker-calendar th, table.ui-datepicker-calendar td{
+  width: 50px;
+  text-align: center;
+} 
+table.ui-datepicker-calendar a{text-decoration: none; color: #9B8ECF; }
 

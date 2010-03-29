@@ -1,29 +1,25 @@
 <div id="header">
 	<div class="central">
 		<div id="header_top" class="clearfix">
-			<a href="<%= root_path %>">
-				<div id="title_banner" class="ui-corner-all">
+			<div id="title_banner">
+				<a href="<%= root_path %>">
 					<span>ThePlanFor</span>.us
-				</div>
-			</a>
+				</a>
+			</div>
 		
 			
-			<div id="user_nav" class="ui-corner-all">  
-			  <% if current_user %>  Hello <%= current_user.username %>, 
-					<%= link_to "My Plans", plans_path %> |
-			    <%= link_to "Edit profile", edit_user_path(:current) %> |
-			    <%= link_to "Logout", logout_path %>  
-			  <% else %>  
-			    <%= link_to "Register", prices_path %>  |
-			    <%= link_to "Log in", login_path %>  
-			  <% end %>  
+			<div id="account_nav">  
+				<ul>
+			  	<% if current_user %>
+						<li><%= link_to "My Plans", plans_path %></li>
+				    <li><%= link_to "Logout", logout_path %> </li>
+				  <% else %>  
+				    <li><%= link_to "Register", prices_path %></li>
+				    <li><%= link_to "Log in", login_path %> </li>
+				  <% end %>  
+				</ul>
 			</div>
 		</div>
-		
-		<div id="main_nav" class='ui-corner-all'>
-			<%= link_to "Tutorials", music_tutorial_path %>
-		</div>
-		
 	</div>
 
 </div>

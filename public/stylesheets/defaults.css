@@ -1,6 +1,6 @@
 * {margin:0;padding:0;} 
-body {font-family: georgia,times;}
-h1 {font-family: helvetica,arial,sans-serif;font-weight: bold; font-size: 30px; text-align: center; margin: 8px 0;}
+body {font-family: 'century gothic';}
+h1 {font-weight: bold; font-size: 30px; text-align: center; margin: 8px 0;}
 h2 {font-size:20px; text-align: left; font-weight: normal; margin: 8px 0;}
 
 html, body, #wrap {height: 100%;}
@@ -10,9 +10,8 @@ body > #wrap {height: auto; min-height: 100%;}
 
 #footer {position: relative;
 	margin-top: -50px; /* negative value of footer height */
-	background: #654b24 url(images/ui-bg_fine-grain_65_654b24_60x60.png) 50% 50% repeat;
-	border-top: 8px solid #654b24;
-	height: 42px;
+	background-color: black;
+	height: 50px;
 	clear:both;
 }
 
@@ -21,8 +20,6 @@ body > #wrap {height: auto; min-height: 100%;}
 
 
 
-/*Override font settings from jQuery*/
-.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {font-family: georgia,times; font-size:11px;}
 
 
 

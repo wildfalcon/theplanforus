@@ -1,6 +1,6 @@
 <tr id="<%= week.html_id %>" class="<%= week_class(week) -%>">
-	<td><%= week.number -%></td>
-	<td class="lessons"><%= week.lessons.size==0 ? "" : week.lessons.size -%></td>
+	<td class="date"><span class="legend">Week of Monday</span><br/><%= week.start_date.strftime("%b %e") -%></td>
+	<td class="lessons"><span class="legend">Lessons</span><br/><%= week.lessons.size==0 ? "0" : week.lessons.size -%></td>
 	<td class="event_details">
 		<div class="events">
 			<%- week.events.each do |event| -%>
