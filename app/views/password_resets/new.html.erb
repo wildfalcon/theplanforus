@@ -1,12 +1,12 @@
-<div class="dominant_form">  
+<div id="forgotten_password" class="standard_form">  
 	<% form_tag password_resets_path do %>
 		<h1>Forgot Password</h1>
 	
-		<div>
-			Tell us your email and instructions to reset your password will be emailed to you:<br />		
+		<div class="summary">
+			Tell us your email and instructions to reset your password will be emailed to you<br />		
 		</div>
 
-		<div>
+		<div class="input">
 			<%= label_tag :email, "Email" %> <br/>
 		  <%= text_field_tag "email" %>	
 		</div>

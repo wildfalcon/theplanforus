@@ -70,6 +70,7 @@ table.ui-datepicker-calendar a{text-decoration: none; color: #9B8ECF; }
 /* Standard from (eg for login)*/
 div.standard_form {border: 15px solid black; background-color: #CBC6E2; margin: 0 auto; padding: 1em 2em;}
 div.standard_form h1 {margin: 0;}
+div.standard_form div.summary {margin: 1em 0; background-color: #9B8ECF;}
 div.standard_form div.input {padding: 0.2em;}
 div.standard_form div.input input {font-size: large;}
 div.standard_form div.input label {color: #303030;}

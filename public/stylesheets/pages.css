@@ -26,3 +26,5 @@ html.lessons body.index div.lesson .commands {float: right;}
 
 /*Login Page*/
 html.user_sessions body.new div#login {margin-top: 50px; width: 450px;}
+
+html.password_resets body.new div#forgotten_password {margin-top: 50px; width: 600px;}

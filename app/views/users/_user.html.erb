@@ -1,38 +1,38 @@
-<div class="dominant_form">
+<div class="standard_form">
 	
 
-<% form_for @user, :html => {:class => "main_form"} do |form| %>  
-<h1>Register</h1>
-<div id="plan_details">
-	While we finish testing and make sure everything is worth paying for, we are 
-	only letting people sign up for the free subscription. Don't worry though, you can upgrade 
-	any time after we launch the other subscriptions.
-</div>
-
-<%= form.error_messages %>  
-  <div class="clearfix">
-		<div id="user_details">
-		  <div>  
-		    <div class="label"><%= form.label :username, "Username" %> </div>
-		    <%= form.text_field :username %>  
-		  </div>  
-		  <div>  
-		     <div class="label"><%= form.label :email, "Email" %> </div> 
-		    <%= form.text_field :email %>  
-		    <p>We will only send important service announcements. If you 
-			want to keep informed of news and updates, follow us on twitter 
-			<a href="http://twitter.com/planforus">@planforus</a></p>
-		  </div>  
-		  <div>  
-		     <div class="label"><%= form.label :password, "Password" %>  </div>
-		    <%= form.password_field :password %>  
-		  </div>  
-		  <div>  
-		     <div class="label"><%= form.label :password_confirmation, "Password confirmation" %>  </div>
-		    <%= form.password_field :password_confirmation %>  
-		  </div>  
-	  </div>
+<% form_for @user  do |form| %>  
+	<h1>Register</h1>
+	<div class="summary">
+		The account is free. We will only use your email to send you important service announcements, and
+		to help if you forget your password.
+		If you want to get news and updates, follow us on twitter <a href="http://twitter.com/planforus">@planforus</a>
 	</div>
+
+	<%= form.error_messages %>  
+
+  <div class="input">  
+    <%= form.label :username, "Username" %> <br/>
+    <%= form.text_field :username %>      
+  </div>  
+	
+	
+	<div class="input">
+		<%= form.label :email, "Email" %> <br/> 
+	  <%= form.text_field :email %>  
+  </div>  
+	
+	
+	  <div class="input">
+			<%= form.label :password, "Password" %><br/>
+	    <%= form.password_field :password %>  
+	  </div>  
+
+	  <div class="input">  
+			<%= form.label :password_confirmation, "Password confirmation" %><br/>
+	    <%= form.password_field :password_confirmation %>  
+	  </div>  
+
   <div>  
     <%= form.submit "Sign me up" %>  
   </div>  

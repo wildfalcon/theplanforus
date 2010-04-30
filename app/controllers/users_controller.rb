@@ -1,11 +1,6 @@
 class UsersController < ApplicationController
   def new  
-    account_type = params[:plan]
-    if account_type == "free"
-      @user = User.new  
-    else
-      render "holding_page"
-    end
+    @user = User.new  
   end  
 
   def create  
