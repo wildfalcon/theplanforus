@@ -8,13 +8,6 @@ class PlansController < ApplicationController
     @plans = current_user.plans
   end
 
-  def weekly
-    @plan  = current_user.plans.find(params[:id])
-    start_date = Date.parse(params[:start]) if params[:start]
-    end_date   = Date.parse(params[:end]) if params[:end]
-    @weeks = @plan.weeks(start_date, end_date)
-  end
-
   def daily
     @plan = current_user.plans.find(params[:id])
     start_date = Date.parse(params[:start]) if params[:start]
@@ -25,6 +18,9 @@ class PlansController < ApplicationController
 
   def show
     @plan = current_user.plans.find(params[:id])
+     start_date = Date.parse(params[:start]) if params[:start]
+      end_date   = Date.parse(params[:end]) if params[:end]
+      @weeks = @plan.weeks(start_date, end_date)
   end
 
   def new

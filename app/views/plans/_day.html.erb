@@ -1,14 +1,14 @@
 <tr id="<%= day.html_id %>" class="<%= day_class(day) -%>">
-	<td><%= day.display_date -%></td>
-	<td>
+	<td class="date"><%= day.display_date -%></td>
+	<td class="<%= "event" if day.events.count > 0 %> <%= "lesson" if day.lessons.count > 0 %>">
 		<div class="events">
 			<%- day.events.each do |event| -%>
-				<div class="<%= event_class(event) %>"><%= event.summary -%></div>
+				<div class="event"><%= event.summary -%></div>
 			<%- end -%>
 		</div>
 		<div class="lessons">
 			<%- day.lessons.each do |lesson| -%>
-				<div class="lesson"><%= lesson.description -%></div>
+				<div class="lesson"><%= lesson.description -%> @ <%= lesson.start.strftime("%H:%M") %></div>
 			<%- end -%>
 		</div>
 	</td>

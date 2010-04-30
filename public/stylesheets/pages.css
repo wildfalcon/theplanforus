@@ -1,8 +1,28 @@
 /* Weekly View */
+html.plans body.show div#weekly table {border-spacing: 0px;}
+html.plans body.show div#weekly table td{border-bottom: 1px solid #222;}
+html.plans body.show div#weekly td.date {background-color: #9B8ECF; text-align: center; padding:0.3em;}
+html.plans body.show div#weekly td.lessons {background-color: #BFB3E8; text-align: center; padding:0.3em;}
+html.plans body.show div#weekly span.legend{font-size:0.7em;}
+html.plans body.show div#weekly table tr td.event_details {border-bottom: 0px; padding-left: 10px;}
+html.plans body.show div#weekly table tr.event td{border-bottom: 1px solid #222; background-color: #BFB3E8;}
+html.plans body.show div#weekly table tr.event td.date{background-color: #9B8ECF;}
 
+/* Daily View */
+html.plans body.daily div#daily table {border-spacing: 0px;}
+html.plans body.daily div#daily table td {border-bottom: 0px;}
+html.plans body.daily div#daily tr td.date {border-bottom: 1px solid #222; background-color: #9B8ECF; text-align: center; padding:0.3em;}
+html.plans body.daily div#daily tr td.lesson {border-bottom: 1px solid #222; background-color: #E9B4C2; padding: 0.3em;}
+html.plans body.daily div#daily tr td.event  {border-bottom: 1px solid #222; background-color: #BFB3E8; padding: 0.3em;}
+html.plans body.daily div#daily tr.weekend td.date {background-color: #674DC3; text-align: center; padding:0.3em;}
+html.plans body.daily div#daily tr.last_of_month td {border-bottom: 3px solid #222;}
 
-html.plans body.weekly div#weekly table {border-spacing: 0px;}
-html.plans body.weekly div#weekly table td{border-bottom: 1px solid black;}
-html.plans body.weekly div#weekly td.date {background-color: #9B8ECF; text-align: center; padding:0.3em;}
-html.plans body.weekly div#weekly td.lessons { text-align: center; padding:0.3em;}
-html.plans body.weekly div#weekly span.legend{font-size:0.7em;}
+/* Lessons View */
+html.lessons body.index form#new_lesson {background-color: #9B8ECF; padding: 0.5em;}
+html.lessons body.index div.lesson {border: 1px solid black;}
+html.lessons body.index div.lesson div h2 {float: left;margin:0;}
+html.lessons body.index div.lesson div span.date {float: right;}
+html.lessons body.index div.lesson .commands {float: right;}
+
+/*Login Page*/
+html.user_sessions body.new div#login {margin-top: 50px; width: 450px;}

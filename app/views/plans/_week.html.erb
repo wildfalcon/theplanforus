@@ -3,8 +3,11 @@
 	<td class="lessons"><span class="legend">Lessons</span><br/><%= week.lessons.size==0 ? "0" : week.lessons.size -%></td>
 	<td class="event_details">
 		<div class="events">
+			<%- if week.events.count > 0 -%>
+				<span class="legend">Competitions</span><br/>
+			<%- end -%>
 			<%- week.events.each do |event| -%>
-				<span class="<%= event_class(event) -%>"><%=  event.summary -%></span>
+				<span class="event"><%=  event.summary -%></span>
 	    <%- end -%>
 		</div>
 	</td>

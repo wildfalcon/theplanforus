@@ -1,0 +1,9 @@
+<%= render :partial => "date_select_form", :locals => {:path => plan_path(@plan)} %>
+
+<div id="weekly" class="clearfix">
+	<div id="events_list"
+		<table>
+	  <%= render :partial => "week", :collection => @weeks %>
+	  </table>
+	</div>
+</div>

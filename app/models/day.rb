@@ -57,6 +57,10 @@ class Day
   def first_day_of_month?
     self.date.day == 1
   end
+  
+  def last_day_of_month?
+    (self.date + 1.day).day == 1
+  end
 
   def display_date
     if first_day_of_month?

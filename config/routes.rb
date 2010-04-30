@@ -20,7 +20,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users  
 
   #The app itself
-  map.resources :plans, :member => { :daily => :get, :weekly => :get, :ical => :get } do |plan|
+  map.resources :plans, :member => { :daily => :get, :ical => :get } do |plan|
     plan.resources :events
     plan.resources :lessons, :collection => {:list => :get}
   end

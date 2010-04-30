@@ -1,14 +1,11 @@
 
 <div id="nav_col">
-  <div class="section">
-    <h3>Plans</h3>
-    <ul class="sub_nav">
-      <li class="<%= selected_class(weekly_plan_path, plans_path) %>"><%= link_to 'Weekly', weekly_plan_path %></li>
-      <li class="<%= selected_class(daily_plan_path, plans_path) %>"><%= link_to 'Daily', daily_plan_path %></li>
-      <li class="<%= selected_class(plan_lessons_path(@plan), plans_path) %>"><%= link_to 'Lessons', plan_lessons_path(@plan) %></li>
-      <li class="<%= selected_class(plan_events_path(@plan), plans_path) %>"><%= link_to 'Events', plan_events_path(@plan) %></li>
-    </ul>
-  </div>
+   <ul class="sub_nav">
+     <li class="<%= selected_class(plan_path(@plan), plan_path(@plan)) %>"><%= link_to 'Weekly', plan_path(@plan) %></li>
+     <li class="<%= selected_class(daily_plan_path(@plan), plan_path(@plan)) %>"><%= link_to 'Daily', daily_plan_path(@plan) %></li>
+     <li class="<%= selected_class(plan_lessons_path(@plan), plan_path(@plan)) %>"><%= link_to 'Lessons', plan_lessons_path(@plan) %></li>
+     <li class="<%= selected_class(plan_events_path(@plan), plan_path(@plan)) %>"><%= link_to 'Events', plan_events_path(@plan) %></li>
+   </ul>
 </div>
 
 <div id="main_col">

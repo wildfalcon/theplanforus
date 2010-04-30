@@ -1,1 +1,11 @@
-<%= render :partial => "daily", :locals => {:days => @days} %>
+<%= render :partial => "date_select_form", :locals => {:path => daily_plan_path(@plan)} %>
+
+<div id="daily" class="clearfix">
+	<div id="events_list">
+		<table>
+		<%= render :partial => "day", :collection => @days %>
+		</table>
+	</div>
+</div>
+
+

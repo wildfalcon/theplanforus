@@ -1,1 +1,20 @@
-<%= render :partial => 'lessons', :locals => {:lessons => @lessons, :plan => enclosing_resource} %>
+<% form_for(Lesson.new, :url => plan_lessons_path(@plan)) do |f| %>
+    <%= f.label :description %>
+    <%= f.text_field :description, {:size => "10"}%>
+
+    <%= f.label :date_string, "Date" %>
+    <%= f.text_field :date_string, {:size=>"10",:class => "datepicker"} %> 
+
+    <%= f.label :start %>
+		<%= f.time_select :start, {:minute_step => 15} %> 
+
+    <%= f.label :end %>
+		<%= f.time_select :end, {:minute_step => 15} %> 
+
+    <%= f.submit 'Book Lesson' %>
+<% end %>
+
+
+<div id="lessons">
+	<%= render :partial => @lessons %>
+</div>

@@ -2,6 +2,7 @@
 module ApplicationHelper
   
   def selected_class(path, root=root_path)
+    puts "#{path} - #{root}"
     if path==root
       return request.request_uri==root ? "selected": nil
     else
@@ -9,11 +10,6 @@ module ApplicationHelper
     end
   end
 
-  def event_class(event)
-    class_name = "secondary"
-    class_name = "primary" if event.primary
-    return class_name
-  end
 
   def pluralize(number, singular)
     number==1 ? singular : singular.pluralize

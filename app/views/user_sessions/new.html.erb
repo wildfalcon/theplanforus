@@ -1,17 +1,19 @@
-<%# title "Log in" %>  
-<div class="dominant_form">  
+
+<div id="login" class="standard_form">  
 
 	<% form_for @user_session do |form| %>  
-		<h1>Login <%= link_to "(Prices and Signup)", prices_path %></h1>
+		<h1>Login</h1>
 		<%= form.error_messages %>  
 
-	  <div>  
+	  <div class="input">  
 	    <%= form.label :username, "Username" %> <br/>
-	    <%= form.text_field :username %>  
+	    <%= form.text_field :username, :tabindex => "1" %>  
 	  </div>  
-	  <div>  
-	    <%= form.label :password, "Password" %> <%= link_to "(forgot password)", new_password_reset_path %>  <br/>
-	    <%= form.password_field :password %>  
+	  <div class="input">  
+	    <%= form.label :password, "Password" %> 
+			<span class="details"><%= link_to "(forgot password)", new_password_reset_path %></span>  
+			<br/>
+	    <%= form.password_field :password, :tabindex => "2" %>  
 	  </div>  
 	  <div>  
 	    <%= form.submit "Login" %>  
