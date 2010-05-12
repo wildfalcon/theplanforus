@@ -3,7 +3,7 @@
 
 class ApplicationController < ActionController::Base
   map_enclosing_resource :plan do
-    current_user.plans.find(params[:plan_id])
+    current_user.plan
   end
 
 

@@ -9,7 +9,7 @@ class PlansController < ApplicationController
   end
 
   def daily
-    @plan = current_user.plans.find(params[:id])
+    @plan = current_user.plan
     start_date = Date.parse(params[:start]) if params[:start]
     end_date   = Date.parse(params[:end]) if params[:end]
     @days = @plan.days(start_date, end_date)
