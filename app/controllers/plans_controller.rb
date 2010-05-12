@@ -17,10 +17,10 @@ class PlansController < ApplicationController
   end
 
   def show
-    @plan = current_user.plans.find(params[:id])
-     start_date = Date.parse(params[:start]) if params[:start]
-      end_date   = Date.parse(params[:end]) if params[:end]
-      @weeks = @plan.weeks(start_date, end_date)
+    @plan = current_user.plan
+    start_date = Date.parse(params[:start]) if params[:start]
+    end_date   = Date.parse(params[:end]) if params[:end]
+    @weeks = @plan.weeks(start_date, end_date)
   end
 
   def new

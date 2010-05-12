@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   acts_as_authentic
 
-  has_many :plans
+  has_one :plan
+  after_create :create_plan
   belongs_to :subscription_level
   delegate :allowed_plans, :timeline_limit, :to => :subscription_level
 
@@ -32,7 +33,6 @@ class User < ActiveRecord::Base
       level = SubscriptionLevel.free
     end
   end
-  
   
   
 end
