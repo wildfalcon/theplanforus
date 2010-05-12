@@ -1,3 +1,8 @@
+/* Home Page */
+html.home body.index div#headline {float: left; width: 400px;}
+html.home body.index div#screenshot {float: right;}
+html.home body.index div#features {background-color: #777; color: white ;}
+
 /* Weekly View */
 html.plans body.show div#weekly table {border-spacing: 0px;}
 html.plans body.show div#weekly table td{border-bottom: 1px solid #222;}
@@ -26,5 +31,4 @@ html.lessons body.index div.lesson .commands {float: right;}
 
 /*Login Page*/
 html.user_sessions body.new div#login {margin-top: 50px; width: 450px;}
-
 html.password_resets body.new div#forgotten_password {margin-top: 50px; width: 600px;}

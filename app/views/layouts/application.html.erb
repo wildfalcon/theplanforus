@@ -6,16 +6,13 @@
 <%= render :partial => "layouts/html_header" %>
 <body class="<%= controller.action_name -%>">
 	<p style="color: green"><%= flash[:notice] %></p> 
-	<div id="wrap" class="ui-widget-content">
+	<div id="wrap">
 		<%= render :partial => "layouts/header" %>	
 		
 		<div id="main" class=" clearfix">
 			<div class="central">
-			  <% if flash[:notice] %>
-			    <div class="flash js_highlight"><%= flash[:notice] %></div>
-			  <% end %>
 				
-		<%= @sub_layout ? render(:partial => "layouts/#{@sub_layout}") : yield %>
+				<%= @sub_layout ? render(:partial => "layouts/#{@sub_layout}") : yield %>
 		
 			</div>
 		</div>
