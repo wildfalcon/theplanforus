@@ -23,6 +23,7 @@ Rails::Initializer.run do |config|
   config.gem "icalendar"
   config.gem "authlogic"
   config.gem "factory_girl", :source => "https://gemcutter.org"
+  config.gem "hoptoad_notifier"
   
 
   # Only load the plugins named here, in the order given (default is alphabetical).
