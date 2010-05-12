@@ -1,6 +1,6 @@
 <tr id="<%= day.html_id %>" class="<%= day_class(day) -%>">
 	<td class="date"><%= day.display_date -%></td>
-	<td class="<%= "event" if day.events.count > 0 %> <%= "lesson" if day.lessons.count > 0 %>">
+	<td class="<%= "event" if day.events.size > 0 %> <%= "lesson" if day.lessons.size > 0 %>">
 		<div class="events">
 			<%- day.events.each do |event| -%>
 				<div class="event"><%= event.summary -%></div>

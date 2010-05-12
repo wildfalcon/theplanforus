@@ -1,9 +1,10 @@
+
 <tr id="<%= week.html_id %>" class="<%= week_class(week) -%>">
 	<td class="date"><span class="legend">Week of Monday</span><br/><%= week.start_date.strftime("%b %e") -%></td>
 	<td class="lessons"><span class="legend">Lessons</span><br/><%= week.lessons.size==0 ? "0" : week.lessons.size -%></td>
 	<td class="event_details">
 		<div class="events">
-			<%- if week.events.count > 0 -%>
+			<%- if week.events.length > 0 -%>
 				<span class="legend">Competitions</span><br/>
 			<%- end -%>
 			<%- week.events.each do |event| -%>
