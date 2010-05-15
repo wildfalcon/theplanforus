@@ -30,6 +30,13 @@ html.lessons body.index div.lesson div h2 {float: left;margin:0;}
 html.lessons body.index div.lesson div span.date {float: right;}
 html.lessons body.index div.lesson .commands {float: right;}
 
+/* Events View */
+html.events body.index form#new_event {background-color: #9B8ECF; padding: 0.5em;}
+html.events body.index div.event {border: 1px solid black;}
+html.events body.index div.event div h2 {float: left;margin:0;}
+html.events body.index div.event div span.date {float: right;}
+html.events body.index div.event .commands {float: right;}
+
 /*Login Page*/
 html.user_sessions body.new div#login {margin-top: 50px; width: 450px;}
 html.password_resets body.new div#forgotten_password {margin-top: 50px; width: 600px;}

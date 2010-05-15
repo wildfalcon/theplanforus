@@ -1,1 +1,11 @@
-<%= render :partial => 'events', :locals => {:events => @events, :plan => enclosing_resource} %>
+<% form_for(Event.new, :url => plan_events_path(@plan)) do |f| %>
+    <%= f.label :description %>
+    <%= f.text_field :name, {:size => "30"}%>
+
+    <%= f.label :date_string, "Date" %>
+    <%= f.text_field :date_string, {:size=>"10",:class => "datepicker"} %> 
+
+    <%= f.submit 'Book Event' %>
+<% end %>
+	
+<%= render :partial => @events %>
