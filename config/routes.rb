@@ -1,7 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
 
   # Single pages, not really "app" but used for marketing
-  map.prices 'prices', :controller => "home", :action => "prices"
   map.signup 'signup', :controller => "home", :action => "signup"
   map.music_tutorial "tutorials/music", :controller => "tutorials", :action => "music_gig"
 
