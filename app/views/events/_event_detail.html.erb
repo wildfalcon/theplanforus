@@ -1,7 +1,0 @@
-<div class="event_detail <%= event_class(event) %>">
-<h2><%= event.name %></h2>
-<div class="date"><%= event.date.strftime("%a %e %b")  %></div>
-<div><span class="counter"><%= event.number_of_days_remaining %></span> Days remaining</div>
-<div><span class="counter"><%= event.preceeding_lessons.size %></span> Lessons remaining beforehand</div>
-<div><span class="counter"><%= event.preceeding_events.size %></span> Events remaining beforehand</div>
-</div>
